@@ -54,13 +54,12 @@ function onNextImageRequested(){
  * @param {number} rating 
  */
 function commitRating(image_id, rating){
-    e = document.createElement("input")
+ 
+    parts = image_id.split("/")
+    id = "/"+parts.at(-3)+"/"+parts.at(-2)+"/"+parts.at(-1)
+    e = document.getElementById(id  )
+    e.value = rating
 
-    e.setAttribute("type", "hidden")
-    e.setAttribute("id", image_id)
-    e.setAttribute("value", rating);
-    
-    document.getElementById("ratings_list").appendChild(e)
 }
 
 

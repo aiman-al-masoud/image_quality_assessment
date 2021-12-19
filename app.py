@@ -11,14 +11,20 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 
 
-IMAGES_PATH = app.static_folder+"/images"
-
-
-pictures =  [f'/static/images/{n}' for n in os.listdir(IMAGES_PATH)]
-
-
-
 @app.route("/")
 def on_index():
-    return render_template("index.html", pictures=pictures)
+    return render_template("index.html")
+    
 
+@app.route("/take_test")
+def on_take_test():
+    IMAGES_PATH = app.static_folder+"/images"
+    pictures =  [f'/static/images/{n}' for n in os.listdir(IMAGES_PATH)]
+    return render_template("take_test.html",  pictures=pictures)
+
+
+@app.route("/done_take_test", methods=["POST", "GET"])
+def on_done_take_test():
+    f = request.form
+    print(f)
+    return render_template("done_take_test.html")
