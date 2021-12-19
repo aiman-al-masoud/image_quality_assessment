@@ -8,7 +8,9 @@ This is the website for a group-project aimed at assessing the quality of images
 ...and navigate to its root directory.
 
 ## 2) Create a python virtual environment 
-...calling it '.my_env'
+...calling it '.my_env' 
+
+(For gitignore-related reasons).
 
 ```
 $ python3 -m venv .my_env
