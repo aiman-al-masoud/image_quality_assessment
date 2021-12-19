@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css">
+
+    <script src="/static/funcs.js"></script>
+
+</head>
+
+
+<body onload="onStart()">
+
+    <form action="" id="rating_form" name="rating_form">
+
+
+        <!--create as many hidden pictures as the paths passed to this template-->
+        <div id="images_div">
+            {% for pic in pictures%}
+
+            <!--center is *very very bad* and deprecated. Find out a way to do apply style in Jinja-->
+            <center>
+                <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
+                <br>
+                <img hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
+            </center>
+
+            {% endfor %}
+        </div>
+
+
+        <!--create the input part of this form, 5 scores from 1 to 5-->
+        <h3>Give this image a rating from 1 to 5:</h3>
+
+
+
+        <center>
+            {% for i in range(1, 6) %}
+            <label for="{{i}}">{{i}}</label>
+            <input type="radio" id={{i}} name="rating_score" onchange="onRatingChanged()">
+            {% endfor %}
+        </center>
+        <br>
+
+        <center>
+            <label id="chosen_rating" for="rating_score"></label>
+        </center>
+        <br>
+
+
+        <center>
+            <!--this button displays the next image-->
+            <button class="my_button" type="button" id="button_next" onclick="onNextImageRequested()">Next</button>
+            <!--this button sends the form to the server.-->
+            <button class="my_button" type="submit" id="button_submit" onclick="">Done</button>
+        </center>
+
+        <!--hidden list to store hidden key-value paris for the ratings.-->
+        <li id="ratings_list" hidden></li>
+
+    </form>
+
+
+
+</body>
+
+</html>
