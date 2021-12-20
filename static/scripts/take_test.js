@@ -68,13 +68,20 @@ function onNextImageRequested(){
     //save the chosen rating for the current image
     commitRating(im.src, getChosenRating())
 
-    //switch to displaying the next image
-    hideImageById(im.id)
-    showImageById(parseInt(im.id)+1)
 
     //clear previous rating
     document.querySelector('input[name="rating_score"]:checked').checked=false
     document.getElementById("chosen_rating").innerHTML=""
+
+
+    //switch to displaying the next image
+    hideImageById(im.id)
+
+    try{
+        showImageById(parseInt(im.id)+1)
+    }catch{
+
+    }    
 
 }
 
@@ -119,43 +126,62 @@ function getCurrentImage(){
 
 
 function hideImageById(id){
-    document.getElementById(id).style.display = 'none'
-    document.getElementById("title_"+id).style.display = "none"
-    document.getElementById("title_"+id).style.visibility = "hidden"
+    //document.getElementById(id).style.display = 'none'
+    //document.getElementById("title_"+id).style.display = "none"
+    //document.getElementById("title_"+id).style.visibility = "hidden"
 
-    title = document.getElementById(`title_${id}`)
-    title.style.visibility="hidden"
-    title.style.display="none"
+    //title = document.getElementById(`title_${id}`)
+    //title.style.visibility="hidden"
+    //title.style.display="none"
+    hideElement(document.getElementById(id))
+    hideElement(document.getElementById(`title_${id}`))
+
 
 }
 
 
 function showImageById(id){
     im =document.getElementById(id)
-    im.style.display="inline-block"
-    im.style.visibility="visible"
+    //im.style.display="inline-block"
+    //im.style.visibility="visible"
+    showElement(im)
 
     title = document.getElementById(`title_${id}`)
-    title.style.display="inline-block"
-    title.style.visibility="visible"
+    //title.style.display="inline-block"
+    //title.style.visibility="visible"
+    showElement(title)
 
 }
 
 
 function showEmailSection(){
+    //e = document.getElementById(id)
+    //e.style.display="inline-block"
+    //e.style.visibility="visible"
     id="email_section"
-    e = document.getElementById(id)
-    e.style.display="inline-block"
-    e.style.visibility="visible"
+    showElement(document.getElementById(id))
 }
 
 
 function hideEmailSection(){
+    //e = document.getElementById(id)
+    //e.style.display="none"
+    //e.style.visibility="hidden"
     id="email_section"
-    e = document.getElementById(id)
-    e.style.display="none"
-    e.style.visibility="hidden"
+    hideElement( document.getElementById(id))
 }
+
+
+function hideElement(element){
+    element.style.display="none"
+    element.style.visibility="hidden"
+}
+
+function showElement(element){
+    element.style.visibility="visible"
+    element.style.display="inline-block"
+}
+
 
 
 
