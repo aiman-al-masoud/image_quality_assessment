@@ -19,7 +19,7 @@ def on_index():
 
 @app.route("/take_test")
 def on_take_test():
-    # TODO: try shuffling these pictures for each different user.
+    # TODO: try shuffling these pictures for each different user. Or filter out some images?
     pictures = get_pictures()
     return render_template("take_test.html",  pictures=pictures)
 
