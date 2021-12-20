@@ -24,7 +24,6 @@ function onRatingChanged(){
     v = getChosenRating()
     label = document.getElementById("chosen_rating")
     label.innerHTML = v
-    //console.log(`user modified rating value to: ${v}`)
 }
 
 
@@ -36,23 +35,22 @@ function getChosenRating(){
     try{
         v = document.querySelector('input[name="rating_score"]:checked').id
     }catch{return null}
-    
     return v;
 }
 
 
 /**
- * Loads the next image to be rated.
+ * Implements the behavior of the 'next' button.
  */
-function onNextImageRequested(){
+function onNextPressed(){
 
 
    // keep on showing the email field and halting, until it's filled out with an email.
    if(!isEmailEntered()){
-       showEmailSection()
+       showById("email_section")
        return 
    }else{
-       hideEmailSection()
+       hideById("email_section")
    }
 
 
@@ -62,7 +60,8 @@ function onNextImageRequested(){
     //if there's no image yet, show the first (id="1") and halt.
     if(im==undefined || im ==null){
         showImageById("1")
-        showRadioSection()
+        //showRadioSection()
+        showById("radio_buttons_section")
         return
     }
 
@@ -81,9 +80,10 @@ function onNextImageRequested(){
     try{
         showImageById(parseInt(im.id)+1)
     }catch{
+        //if that's the last image, show the done button.
         showById("button_submit")
         hideById("button_next")
-        hideRadioSection()
+        hideById("radio_buttons_section")
     }    
 
 }
@@ -115,9 +115,9 @@ function isHidden(el) {
 }
 
 
-
 /**
- * Get the currently displayed (not-hidden) image element
+ * Get the currently displayed image.
+ * (The first image (from above) that isn't hidden).
  */
 function getCurrentImage(){
     images = document.getElementById("images_div").getElementsByTagName("img")
@@ -129,69 +129,31 @@ function getCurrentImage(){
 
 
 function hideImageById(id){
-    hideElement(document.getElementById(id))
-    hideElement(document.getElementById(`title_${id}`))
+    hideById(id)
+    hideById(`title_${id}`)
 }
-
 
 function showImageById(id){
-    im =document.getElementById(id)
-    showElement(im)
-    title = document.getElementById(`title_${id}`)
-    showElement(title)
+    showById(id)
+    showById(`title_${id}`)
 }
-
-
-function showEmailSection(){
-    id="email_section"
-    showElement(document.getElementById(id))
-}
-
-
-function hideEmailSection(){
-    id="email_section"
-    hideElement( document.getElementById(id))
-}
-
-
-function showRadioSection(){
-    e = document.getElementById("radio_buttons_section")
-    showElement(e)
-}
-
-function hideRadioSection(){
-    e = document.getElementById("radio_buttons_section")
-    hideElement(e)
-}
-
-
 
 function hideById(id){
-    hideElement(document.getElementById(id))
-}
-
-function showById(id){
-    showElement(document.getElementById(id))
-}
-
-
-
-
-function hideElement(element){
+    element = document.getElementById(id)
     element.style.display="none"
     element.style.visibility="hidden"
 }
 
-function showElement(element){
+function showById(id){
+    element = document.getElementById(id)
     element.style.visibility="visible"
     element.style.display="inline-block"
 }
 
 
-
 function onStart(id){
-    showEmailSection()
-    hideRadioSection()
+    showById("email_section")
+    hideById("radio_buttons_section")
     hideById("button_submit")
 }
 

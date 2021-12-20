@@ -1,0 +1,5 @@
+This folder is meant to store user-generated data.
+
+rating_forms:
+Will contain a file for each user that takes the test.
+Each file is a csv in the key-value format.

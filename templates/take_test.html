@@ -1,3 +1,8 @@
+<!--IMPORTANT NOTES:
+    -> For any field in the form to be sent back to the server, it MUST HAVE A NAME. (Id alone won't work).
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +20,16 @@
 
 <body onload="onStart()">
 
-    <form  id="rating_form" name="rating_form" action="/done_take_test" method="POST">
+    <form id="rating_form" name="rating_form" action="/done_take_test" method="POST">
 
 
-        <!--for the user to input their email address before taking the test-->
+       
         <center>
+            <!--for the user to input their email address before taking the test-->
             <div id="email_section" hidden>
-                <h2 >Please provide a valid email address:</h2>
-                <input  id="email_input" type="email" placeholder=""></input>
+                <h2>Please provide a valid email address:</h2>
+                <input name="email_input" id="email_input" type="email" placeholder=""></input>        
+                <!--TODO: request more user info? Expertise, Age, Gender...?-->
             </div>
         </center>
 
@@ -35,7 +42,7 @@
             <center>
                 <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
                 <br>
-                <img hidden id="{{loop.index}}"   src={{pic}} alt="" height="400" />
+                <img hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
             </center>
 
             {% endfor %}
@@ -45,24 +52,24 @@
         <!--create the input part of this form, 5 scores from 1 to 5-->
         <center>
             <div id="radio_buttons_section">
-            <h3>Give this image a rating from 1 to 5:</h3>
-             {% for i in range(1, 6) %}
-              <label for="{{i}}">{{i}}</label>
-              <input type="radio" id={{i}} name="rating_score" onchange="onRatingChanged()">
-             {% endfor %}
-             <br>
-             <label id="chosen_rating" for="rating_score"></label>
+
+                <h3>Give this image a rating from 1 to 5:</h3>
+                {% for i in range(1, 6) %}
+                <label for="{{i}}">{{i}}</label>
+                <input type="radio" id={{i}} name="rating_score" onchange="onRatingChanged()">
+                {% endfor %}
+                <br>
+                <label id="chosen_rating" for="rating_score"></label>
+
             </div>
         </center>
         <br>
 
-
-
         <center>
             <!--this button displays the next image-->
-            <button class="my_button" type="button" id="button_next" onclick="onNextImageRequested()">Next</button>
+            <button id="button_next" class="my_button" type="button" onclick="onNextPressed()">Next</button>
             <!--this button sends the form to the server.-->
-            <button class="my_button" type="submit" id="button_submit" onclick="">Done</button>
+            <button id="button_submit" class="my_button" type="submit" onclick="">Done</button>
         </center>
 
 

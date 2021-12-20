@@ -1,0 +1,19 @@
+- Write the static part of the website, presenting and describing the results of the former experiments. Possibly, in an appealing way.
+
+- Write the part that dynamically produces graphs/dashboards from user-generated data.
+
+- Write a privacy policy for this website and check out relevant laws, or ask Prof. (Important because we're handling emails and, potentially, other personal data)
+
+- Improve the UIX/look-and-feel of the website.
+
+- Write credits, general info, and other documentation. 
+
+- Figure out a way to integrate GitHub with Pythonanywhere/or 
+any other Python-back-end hosting service. For easier deployment.
+
+Useful links:
+
+https://medium.com/@aadibajpai/deploying-to-pythonanywhere-via-github-6f967956e664
+
+
+- Get this thing LIVE, by the first week of January 2022.
