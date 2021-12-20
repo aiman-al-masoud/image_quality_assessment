@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# local environment and settings
+.my_env/
+.vscode
+
+# except for a few example images.
+static/images/
+
+# to avoid cluttering the repo with test data.
+dynamic/
+
+
+
