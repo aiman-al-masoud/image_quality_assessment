@@ -62,6 +62,7 @@ function onNextImageRequested(){
     //if there's no image yet, show the first (id="1") and halt.
     if(im==undefined || im ==null){
         showImageById("1")
+        showRadioSection()
         return
     }
 
@@ -80,7 +81,9 @@ function onNextImageRequested(){
     try{
         showImageById(parseInt(im.id)+1)
     }catch{
-
+        showById("button_submit")
+        hideById("button_next")
+        hideRadioSection()
     }    
 
 }
@@ -126,50 +129,52 @@ function getCurrentImage(){
 
 
 function hideImageById(id){
-    //document.getElementById(id).style.display = 'none'
-    //document.getElementById("title_"+id).style.display = "none"
-    //document.getElementById("title_"+id).style.visibility = "hidden"
-
-    //title = document.getElementById(`title_${id}`)
-    //title.style.visibility="hidden"
-    //title.style.display="none"
     hideElement(document.getElementById(id))
     hideElement(document.getElementById(`title_${id}`))
-
-
 }
 
 
 function showImageById(id){
     im =document.getElementById(id)
-    //im.style.display="inline-block"
-    //im.style.visibility="visible"
     showElement(im)
-
     title = document.getElementById(`title_${id}`)
-    //title.style.display="inline-block"
-    //title.style.visibility="visible"
     showElement(title)
-
 }
 
 
 function showEmailSection(){
-    //e = document.getElementById(id)
-    //e.style.display="inline-block"
-    //e.style.visibility="visible"
     id="email_section"
     showElement(document.getElementById(id))
 }
 
 
 function hideEmailSection(){
-    //e = document.getElementById(id)
-    //e.style.display="none"
-    //e.style.visibility="hidden"
     id="email_section"
     hideElement( document.getElementById(id))
 }
+
+
+function showRadioSection(){
+    e = document.getElementById("radio_buttons_section")
+    showElement(e)
+}
+
+function hideRadioSection(){
+    e = document.getElementById("radio_buttons_section")
+    hideElement(e)
+}
+
+
+
+function hideById(id){
+    hideElement(document.getElementById(id))
+}
+
+function showById(id){
+    showElement(document.getElementById(id))
+}
+
+
 
 
 function hideElement(element){
@@ -184,9 +189,10 @@ function showElement(element){
 
 
 
-
 function onStart(id){
     showEmailSection()
+    hideRadioSection()
+    hideById("button_submit")
 }
 
 
