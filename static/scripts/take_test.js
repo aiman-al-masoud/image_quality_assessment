@@ -4,6 +4,19 @@
  */
 
 
+
+/**
+ * Checks if the email field is properly filled. 
+ * @returns 
+ */
+function isEmailEntered(){
+    email = document.getElementById("email_input").value
+    console.log(email)
+    return !!email
+}
+
+
+
 /**
  * Displays/Updates the currently selected rating.
  */
@@ -11,7 +24,7 @@ function onRatingChanged(){
     v = getChosenRating()
     label = document.getElementById("chosen_rating")
     label.innerHTML = v
-    console.log(`user modified rating value to: ${v}`)
+    //console.log(`user modified rating value to: ${v}`)
 }
 
 
@@ -32,8 +45,25 @@ function getChosenRating(){
  * Loads the next image to be rated.
  */
 function onNextImageRequested(){
-    
+
+
+   // keep on showing the email field and halting, until it's filled out with an email.
+   if(!isEmailEntered()){
+       showEmailSection()
+       return 
+   }else{
+       hideEmailSection()
+   }
+
+
+    // get the image that's currently on the user's display
     im =  getCurrentImage()
+
+    //if there's no image yet, show the first (id="1") and halt.
+    if(im==undefined || im ==null){
+        showImageById("1")
+        return
+    }
 
     //save the chosen rating for the current image
     commitRating(im.src, getChosenRating())
@@ -61,7 +91,6 @@ function commitRating(image_id, rating){
     e.value = rating
 
 }
-
 
 
 
@@ -113,6 +142,29 @@ function showImageById(id){
 }
 
 
-function onStart(id){
-    showImageById("1")
+function showEmailSection(){
+    id="email_section"
+    e = document.getElementById(id)
+    e.style.display="inline-block"
+    e.style.visibility="visible"
 }
+
+
+function hideEmailSection(){
+    id="email_section"
+    e = document.getElementById(id)
+    e.style.display="none"
+    e.style.visibility="hidden"
+}
+
+
+
+function onStart(id){
+    showEmailSection()
+}
+
+
+
+
+
+

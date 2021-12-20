@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css">
-
+    <title>Take the Test</title>
+    <link href="{{url_for('static', filename='stylesheets/take_test.css')}}" rel="stylesheet" type="text/css">
     <script src="/static/scripts/take_test.js"></script>
 
 </head>
@@ -19,11 +18,23 @@
     <form  id="rating_form" name="rating_form" action="/done_take_test" method="POST">
 
 
+
+        <center>
+            <div id="email_section" hidden>
+                <h2 >Please provide a valid email address:</h2>
+                <input  id="email_input" type="email" placeholder=""></input>
+            </div>
+        </center>
+
+
+
+
+
         <!--create as many hidden pictures as the paths passed to this template-->
         <div id="images_div">
             {% for pic in pictures%}
 
-            <!--center is *very very bad* and deprecated. Find out a way to do apply style in Jinja-->
+            <!-- TODO: fix center. it's *very very very bad* and deprecated, but it works.-->
             <center>
                 <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
                 <br>
@@ -61,8 +72,7 @@
         </center>
 
 
-        <!--store hidden key-value paris for the ratings.-->
-
+        <!--store hidden key-value paris for: (image, rating).-->
         {% for pic in pictures%}
         <input type="hidden" id={{pic}} name={{pic}} value=""></input>
         {% endfor%}
