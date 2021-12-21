@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{url_for('static', filename='stylesheets/general.css')}}" rel="stylesheet" type="text/css">
+    <link href="../static/stylesheets/general.css" rel="stylesheet" type="text/css">
 
     <title>Homepage</title>
+    <!-- ADD .png logo-->
 </head>
 <body>
+    <section id="container">
+        <header id="header">
+            <h1>Subjective image quality assessment</h1>
+            <p>Brief description</p>
+        </header>
+        <article id="content">
+            
+            <h2>What's been already done:</h2>
 
-    <h1>Welcome to our Project's website!</h1>
-
-    <h2>What's been already done:</h2>
-
-    <p>Something about our individual projects...</p>
-
-    <h2>What we're looking forward to:</h2>
-
-    <a href="/take_test">Take the test!</a>
-
-    <h2>Credits & Collaborators</h2>
-
-    <li>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
-    </li>
-
+            <p>Something about our individual projects...</p>
+        
+            <h2>What we're looking forward to:</h2>
+        
+            <a href="/take_test"><button class="take_test" role="button">Take the test!</button></a>
+        
+            <h2>Credits & Collaborators</h2>
+        </article>
+    <nav id="navbar">
+        <li><a href="#">Take a test</a></li>
+        <li><a href="#">Download</a></li>
+    </nav>    
+    <footer id="footer"><span class="it">&copy; 2021</span></footer>
+    </section>   
 
 </body>
+
+
 </html>
