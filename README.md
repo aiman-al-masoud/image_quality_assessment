@@ -6,6 +6,64 @@ This is the website for a group-project aimed at assessing the quality of images
 
 <a href="https://www.youtube.com/watch?v=_zmjctS8I1Y">See it in action.</a>
 
+
+# IMPORTANT NOTICE (ABOUT FLASK, PLEASE READ IT): 
+
+<a href="https://en.wikipedia.org/wiki/Flask_(web_framework)">Flask</a> is the Python web-framework currently being used to develop the back-end of this website. It's simple and easy to use if you know some basic Python. 
+
+(But if anyone has any better proposals for a web framework in Python or Java, please notify the rest).
+
+## Linking Resources:
+
+Flask requires a special syntax to link static resources to html-templates. 
+
+All of the static resources are to be placed in the 'static' folder, and eventually in sub-folders.
+
+Example (linking a css file in html):
+
+```
+<link href="{{url_for('static', filename='stylesheets/general.css')}}" rel="stylesheet" type="text/css">
+```
+
+(This will tell flask to fetch general.css in the specified location within the static folder).
+
+## Links (hrefs): 
+
+Relative links to any part of this website must be specified according to the names defined in the python decorators for the methods in app.py.
+
+Examples:
+
+```
+# this gets called when the homepage (plain web-address) is requested.
+@app.route("/")
+def on_index():
+  pass
+
+```
+
+
+```
+# this gets called when: webaddress/take_test is requested.
+@app.route("/take_test")
+def on_take_test():
+   pass
+
+```
+
+## More about flask:
+https://flask-restful.readthedocs.io/en/latest/quickstart.html
+
+(or Stackoverflow).
+
+
+
+
+**That's all, thank you for taking the time to read this!**
+
+
+
+
+
 # Setting up a local testing environment:
 
 ## 1) Clone this repo
