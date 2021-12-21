@@ -4,7 +4,7 @@
 
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
-<a href="https://www.youtube.com/watch?v=_zmjctS8I1Y">See it in action.</a>
+This website is currently LIVE AND REACHABLE in an <a href="http://dcrstudentsunited.pythonanywhere.com/">experimental form</a>. We'll have to VOTE ON A NEW DOMAIN-NAME, and maybe create a new Pythonanywhere account for that. You can ask <a href="https://github.com/aiman-al-masoud">aiman</a> for the credentials to access the current Pythonanywhere account. We're using git to pull manually changes from this repo over to the Pythonanywhere server. 
 
 
 # IMPORTANT NOTICE (ABOUT FLASK, PLEASE READ IT): 
@@ -120,8 +120,4 @@ Click on the link, and the homepage will be launched on your default browser.
 
 https://www.webinstinct.com/faq/how-to-disable-browser-cache
 
-
-# This website will eventually run on a (real) server:
-
-Link: https://placeholderplaceholderplaceholderplaceholder.com
 
