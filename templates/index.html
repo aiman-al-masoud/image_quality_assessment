@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../static/stylesheets/general.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Homepage</title>
     <!-- ADD .png logo-->
 </head>
-<body>
-    <section id="container">
-        <header id="header">
-            <h1>Subjective image quality assessment</h1>
-            <p>Brief description</p>
-        </header>
-        <article id="content">
-            
-            <h2>What's been already done:</h2>
 
-            <p>Something about our individual projects...</p>
+<body>
+
+    <nav id="navbar" class="sticky">
+        <a class="active" href="http://csu.unipv.it/"><i class="fa fa-handshake-o"></i> CSU</a> 
+        <a href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="#content"><i class="fa fa-info-circle"></i> Content</a>
+        <a href="#download"><i class="fa fa-download"></i> Download</a>
+        <a href="#test"><i class="fa fa-line-chart"></i> Test</a>
+        <a href="#authors"><i class="fa fa-group"></i> Authors</a>
+    </nav>  
+
+    <header id="header">
+        <h1>Subjective image quality assessment</h1>
+        <p>Brief description</p>
+    </header>
+
+    <article id="content">
+        <h2>What's been already done:</h2>
         
-            <h2>What we're looking forward to:</h2>
+        <p>Something about our individual projects...</p>
         
-            <a href="/take_test"><button class="take_test" role="button">Take the test!</button></a>
-        
-            <h2>Credits & Collaborators</h2>
-        </article>
-    <nav id="navbar">
-        <li><a href="#">Take a test</a></li>
-        <li><a href="#">Download</a></li>
-    </nav>    
-    <footer id="footer"><span class="it">&copy; 2021</span></footer>
-    </section>   
+        <h2>What we're looking forward to:</h2>
+    </article>
+
+    <article id="download">
+        <h2>Download</h2>
+    </article>
+    
+    <article id="test">
+        <h2>Test</h2>
+        <a href="/take_test"><button class="take_test" role="button">Take the test!</button></a>
+    </article> 
+
+    <article id="authors">
+        <h2>Credits & Collaborators</h2>
+    </article>
+
+    <footer id="footer">
+        <span class="it">
+            Università degli Studi di Pavia
+            <br>
+            Digital Content Retrieval
+            <br><br>
+            &copy; 2021-2022
+        </span>
+    </footer>
 
 </body>
-
-
 </html>
