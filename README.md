@@ -1,4 +1,7 @@
 # image_quality_assesment
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/aiman-al-masoud/image_quality_assessment/blob/main/LICENSE)
+
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
 <a href="https://www.youtube.com/watch?v=_zmjctS8I1Y">See it in action.</a>
