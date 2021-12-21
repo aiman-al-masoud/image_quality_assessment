@@ -41,17 +41,39 @@
 
     <article id="download">
         <h2>Download</h2>
+        <p>
+            In order to provide you usefull data you can download both the image repository and some of our presentations.
+            <br><br>
+            <a href="#"><button class="button" role="button">Download image repository</button></a>
+            <br><br>
+            <a href="#"><button class="button" role="button">Download presentations</button></a>
+        </p>
     </article>
     <hr>
 
     <article id="test">
         <h2>Test</h2>
-        <a href="take_test.html"><button class="take_test" role="button">Take the test!</button></a>
+        <a href="take_test.html"><button class="button" role="button">Take the test!</button></a>
     </article> 
     <hr>
 
     <article id="authors">
         <h2>Credits & Collaborators</h2>
+        <br>
+        <div class="text">
+            <p>
+              <span class="word"></span>
+              <span class="word">Aiman Al Masoud</span>
+              <span class="word">Francesco Amato</span>
+              <span class="word">Andrei Blindu</span>
+              <span class="word">Mattia Bottini</span>
+              <span class="word">Davide Lotito</span>
+              <span class="word">Francesco Marinelli</span>
+              <span class="word">Daniele Murer</span>
+              <span class="word">Riccardo Petri</span>
+              <span class="word">Fabio Tagliani</span>
+            </p>
+          </div>
     </article>
 
     <footer id="footer">
@@ -63,4 +85,60 @@
     </footer>
 
 </body>
+
+<script>
+    var words = document.getElementsByClassName('word');
+    var wordArray = [];
+    var currentWord = 0;
+
+    words[currentWord].style.opacity = 1;
+    for (var i = 0; i < words.length; i++) {
+        splitLetters(words[i]);
+    }   
+
+    function changeWord() {
+        var cw = wordArray[currentWord];
+        var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+        for (var i = 0; i < cw.length; i++) {
+            animateLetterOut(cw, i);
+        }
+  
+    for (var i = 0; i < nw.length; i++) {
+        nw[i].className = 'letter behind';
+        nw[0].parentElement.style.opacity = 1;
+        animateLetterIn(nw, i);
+    }
+    currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+    }
+
+    function animateLetterOut(cw, i) {
+    setTimeout(function() {
+        cw[i].className = 'letter out';
+        }, i*80);
+    }
+
+    function animateLetterIn(nw, i) {
+    setTimeout(function() {
+        nw[i].className = 'letter in';
+        }, 340+(i*80));
+    }
+
+    function splitLetters(word) {
+        var content = word.innerHTML;
+        word.innerHTML = '';
+        var letters = [];
+        for (var i = 0; i < content.length; i++) {
+            var letter = document.createElement('span');
+            letter.className = 'letter';
+            letter.innerHTML = content.charAt(i);
+            word.appendChild(letter);
+            letters.push(letter);
+        }
+    wordArray.push(letters);
+    }
+
+    changeWord();
+    setInterval(changeWord, 4000);
+</script>
+
 </html>
