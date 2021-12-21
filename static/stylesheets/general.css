@@ -3,6 +3,13 @@ body{
     text-align: center;
 }
 
+hr {
+  height:2px;
+  border-width:0;
+  color:gray;
+  background-color:gray;
+}
+
 #navbar {
   width: 100%;
   background-color: rgb(46, 46, 46);
