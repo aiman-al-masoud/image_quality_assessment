@@ -120,7 +120,7 @@ p {
 .word {
   position: absolute;
   opacity: 0;
-  font-size: 1.2em;
+  font-size: 115%;
   color: #5adaff;
 }
   
