@@ -88,6 +88,12 @@ $ source ./my_env/bin/activate
 
 (You should notice that the console starts displaying the virtual environment's name before your username and the dollar-sign).
 
+If this command doesn't works try with:
+
+```
+$ . .my_env/bin/activate
+```
+
 
 ## 4) Install this app's dependencies 
 ... on the virtual environment you just created:
