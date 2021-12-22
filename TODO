@@ -1,4 +1,4 @@
-- Vote on whether to keep this repo and how to proceed.
+- Vote on a new domain-name.
 
 - Write the static part of the website, presenting and describing the results of the former experiments. Possibly, in an appealing way.
 
@@ -12,13 +12,4 @@
 
 - Write credits, general info, and other documentation. 
 
-- Figure out a way to integrate GitHub with Pythonanywhere/or 
-any other Python-back-end hosting service. For easier deployment.
-
-Useful links:
-
-https://medium.com/@aadibajpai/deploying-to-pythonanywhere-via-github-6f967956e664
-
-https://help.pythonanywhere.com/pages/UploadingAndDownloadingFiles/
-
-- Get this thing LIVE, by the first week of January 2022.
+- Get this thing ready, by the first week of January 2022.
