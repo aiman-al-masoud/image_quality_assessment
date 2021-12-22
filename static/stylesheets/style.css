@@ -261,8 +261,15 @@ p {
 }
 
 /* PCs */
-@media screen and (min-width:1220px) {
+@media screen and (min-width:1220px) and (max-width:1399px){
   #header{
     background-size: 130%;
+  }
+}
+
+/* Monitors */
+@media screen and (min-width:1400px) {
+  #header{
+    background-size: 110%;
   }
 }
