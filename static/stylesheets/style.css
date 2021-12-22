@@ -1,3 +1,4 @@
+/* ========================================================Index================================================== */
 body{
   background: #090909;
   text-align: center;
@@ -19,7 +20,7 @@ hr {
 #navbar a {
   float: left;
   padding: 12px;
-  color: white;
+  color: rgb(241, 241, 241);
   text-decoration: none;
   font-size: 17px;
 }
@@ -29,7 +30,7 @@ hr {
 }
 
 .active {
-  background-color: #384fff;
+  background-color: #3c4fe0;
 }
 
 .sticky {
@@ -41,7 +42,7 @@ hr {
 #header {
   padding: 10% 0% 6%;
   text-align: center;
-  color: white;
+  color: rgb(241, 241, 241);
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@ h1, h2, h3, h4, h5, h6 p{
   border-radius: 8px;
   box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 12px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #fff;
+  color: rgb(241, 241, 241);
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
@@ -158,7 +159,7 @@ p {
   position: absolute;
   opacity: 0;
   font-size: 110%;
-  color: #5adaff;
+  color: #27bce6;
 }
   
 .letter {
@@ -185,9 +186,17 @@ p {
   padding: 1% 0% 1%;
   width: 100%;
   background-color: #3f3f3f;
-  color: white;
+  color: rgb(241, 241, 241);
   text-align: center;
 }
+
+
+/* ========================================================Take Test================================================== */
+
+.label {
+  color: rgb(241, 241, 241);
+}
+
 
 /* ========================================================Responsive================================================== */
 /* @TODO: Fix problems with all devices, with different screens */
