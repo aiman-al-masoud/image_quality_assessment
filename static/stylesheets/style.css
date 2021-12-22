@@ -199,9 +199,70 @@ p {
 
 
 /* ========================================================Responsive================================================== */
-/* @TODO: Fix problems with all devices, with different screens */
-@media screen and (max-width:450px) {
-  h1 {
-    font-size: 1.2em;
+
+/* Phones */
+@media screen and (min-width:320px) and (max-width:360px) {
+  h1{
+    font-size:1em;
+  }
+  
+  #header{
+    padding: 30% 0% 15%;
+    background-size: 300%;
+  }
+}
+
+/* Larger phones */
+@media screen and (min-width:361px) and (max-width:474px) {
+  h1{
+    font-size:1em;
+  }
+  
+  #header{
+    padding: 25% 0% 15%;
+    background-size: 200%;
+  }
+}
+
+/* Mini-tablet */
+@media screen and (min-width:475px) and (max-width:700px) {
+  h1{
+    font-size:1.2em;
+  }
+  
+  #header{
+    padding: 22% 0% 15%;
+    background-size: 180%;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width:701px) and (max-width:799px) {
+  #header{
+    padding: 22% 0% 10%;
+    background-size: 165%;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width:800px) and (max-width:999px) {
+  #header{
+    padding: 18% 0% 6%;
+    background-size: 150%;
+  }
+}
+
+/* PCs */
+@media screen and (min-width:1000px) and (max-width:1219px) {
+  #header{
+    padding: 15% 0% 6%;
+    background-size: 150%;
+  }
+}
+
+/* PCs */
+@media screen and (min-width:1220px) {
+  #header{
+    background-size: 130%;
   }
 }
