@@ -12,7 +12,7 @@ hr {
 
 #navbar {
   width: 100%;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(20, 20, 20);
   overflow: auto;
 }
 
@@ -29,7 +29,7 @@ hr {
 }
 
 .active {
-  background-color: #5468ff;
+  background-color: #384fff;
 }
 
 .sticky {
@@ -39,21 +39,58 @@ hr {
 }
 
 #header {
-  padding: 10% 2% 10%;
+  padding: 10% 0% 6%;
   text-align: center;
   color: white;
   font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-repeat: no-repeat;
-  background-size: 100%;   
-  background-image: url("../icons/header-bg.jpg");
+  background-size: 130%;
+  background-image: url("../icons/header-bg.svg");
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
-h1, h2, h3, p{
+h1, h2, h3, h4, h5, h6 p{
   color: rgb(241, 241, 241);
+}
+
+#see-more{
+  padding-top: 20%;
+  color: rgb(216, 216, 216);
+  font-size: 0.5em;
+}
+
+.stage {
+  display: flex;
+  width: 100%;
+}
+
+.box {
+  align-self: center;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background-image: url("../icons/scroll-down.png");;
+  height: 30px;
+  background-repeat: no-repeat;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 60px;
+}
+
+.bounce-4 {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-4 {
+  0%   { transform: scale(1,1)    translateY(0); }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.9,1.1) translateY(35px); }
+  50%  { transform: scale(1,1)    translateY(0); }
+  100% { transform: scale(1,1)    translateY(0); }
 }
 
 .button {
@@ -103,10 +140,10 @@ h1, h2, h3, p{
 
 .text {
   position: relative;
-  width: 450px;
+  width: 500px;
   left: 50%;
-  margin-left: -225px;
-  height: 40px;
+  margin-left: -298px;
+  height: 35px;
   top: 50%;
   margin-top: -20px;
 }
@@ -120,7 +157,7 @@ p {
 .word {
   position: absolute;
   opacity: 0;
-  font-size: 115%;
+  font-size: 110%;
   color: #5adaff;
 }
   
@@ -150,4 +187,12 @@ p {
   background-color: #3f3f3f;
   color: white;
   text-align: center;
+}
+
+/* ========================================================Responsive================================================== */
+/* @TODO: Fix problems with all devices, with different screens */
+@media screen and (max-width:450px) {
+  h1 {
+    font-size: 1.2em;
+  }
 }

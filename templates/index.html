@@ -9,9 +9,7 @@
     
     <link href="{{url_for('static', filename='stylesheets/general.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/favicon.ico')}}">
-
 
     <title>SIQA - Homepage</title>
 </head>
@@ -29,6 +27,13 @@
     <header id="header">
         <h1>Subjective image quality assessment</h1>
         <p>Brief description</p>
+        <br>
+        <div id="see-more">
+            SEE MORE
+            <div class="stage">
+                <div class="box bounce-4"></div>
+            </div>
+        </div>
     </header>
     
     <article id="content">
@@ -54,6 +59,7 @@
     <article id="test">
         <h2>Test</h2>
         <a href="/take_test"><button class="button" role="button">Take the test!</button></a>
+        <br><br>
     </article> 
 
     <footer id="footer">
@@ -61,7 +67,7 @@
             <div class="text">
                 <br>
                 <p>
-                  <span class="word"></span>
+                  Made by:
                   <span class="word">Aiman Al Masoud</span>
                   <span class="word">Francesco Amato</span>
                   <span class="word">Andrei Blindu</span>
@@ -81,9 +87,7 @@
 
 </body>
 
-<!-- Animation for authors names-->
-
+<!-- Animation for authors names -->
 <script src="{{url_for('static', filename='scripts/contributors_animation.js')}}"></script>
-
 
 </html>
