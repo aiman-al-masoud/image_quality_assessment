@@ -86,13 +86,13 @@ $ python3 -m venv .my_env
 $ source ./my_env/bin/activate
 ```
 
-(You should notice that the console starts displaying the virtual environment's name before your username and the dollar-sign).
-
 If this command doesn't works try with:
 
 ```
 $ . .my_env/bin/activate
 ```
+
+(You should notice that the console starts displaying the virtual environment's name before your username and the dollar-sign).
 
 
 ## 4) Install this app's dependencies 
