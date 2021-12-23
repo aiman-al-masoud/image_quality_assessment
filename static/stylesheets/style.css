@@ -78,12 +78,8 @@ h1, h2, h3, h4, h5, h6, p{
   overflow:hidden;
 }
 
-.flip-color{
-  color: #5267ff;
-}
-
 #flip > div > div {
-  color:#5267ff;
+  color:#7181fc;
   padding:2px 0px;
   height:45px;
   margin-bottom:45px;
