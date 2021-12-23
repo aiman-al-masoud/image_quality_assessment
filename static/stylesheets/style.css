@@ -12,6 +12,7 @@ hr {
 }
 
 #navbar {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 100%;
   background-color: rgb(20, 20, 20);
   overflow: auto;
@@ -19,7 +20,8 @@ hr {
 
 #navbar a {
   float: left;
-  padding: 12px;
+  padding: 10px 0px 10px;
+  width: 120px;
   color: rgb(241, 241, 241);
   text-decoration: none;
   font-size: 17px;
@@ -47,6 +49,7 @@ hr {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-repeat: no-repeat;
   background-size: 130%;
+  background-position: left;
   background-image: url("../icons/header-bg.svg");
 }
 
@@ -73,7 +76,7 @@ h1, h2, h3, h4, h5, h6 p{
   align-self: center;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  background-image: url("../icons/scroll-down.png");;
+  background-image: url("../icons/scroll-down.png");
   height: 30px;
   background-repeat: no-repeat;
   margin: 0 auto 0 auto;
@@ -144,7 +147,7 @@ h1, h2, h3, h4, h5, h6 p{
   width: 500px;
   left: 50%;
   margin-left: -298px;
-  height: 35px;
+  height: 40px;
   top: 50%;
   margin-top: -20px;
 }
@@ -185,7 +188,7 @@ p {
   position: relative;
   padding: 1% 0% 1%;
   width: 100%;
-  background-color: #3f3f3f;
+  background-color: #202020;
   color: rgb(241, 241, 241);
   text-align: center;
 }
@@ -200,8 +203,8 @@ p {
 
 /* ========================================================Responsive================================================== */
 
-/* Phones */
-@media screen and (min-width:320px) and (max-width:360px) {
+/* Phones -- From screens larger than 320px the behaviour is not controlled */
+@media screen and (min-width:0px) and (max-width:366px) {
   h1{
     font-size:1em;
   }
@@ -210,10 +213,16 @@ p {
     padding: 30% 0% 15%;
     background-size: 300%;
   }
+
+  #navbar a {
+    padding: 10px 8px 10px;
+    font-size: 10px;
+    width: auto;
+  }
 }
 
 /* Larger phones */
-@media screen and (min-width:361px) and (max-width:474px) {
+@media screen and (min-width:367px) and (max-width:474px) {
   h1{
     font-size:1em;
   }
@@ -221,6 +230,12 @@ p {
   #header{
     padding: 25% 0% 15%;
     background-size: 200%;
+  }
+
+  #navbar a {
+    padding: 10px 8px 10px;
+    font-size: 13px;
+    width: auto;
   }
 }
 
@@ -233,6 +248,11 @@ p {
   #header{
     padding: 22% 0% 15%;
     background-size: 180%;
+  }
+
+  #navbar a {
+    padding: 10px 8px 10px;
+    width: auto;
   }
 }
 
