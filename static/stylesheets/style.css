@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5, h6, p{
   100% { transform: scale(1,1)    translateY(0); }
 }
 
+
 .button {
   align-items: center;
   appearance: none;
@@ -167,6 +168,13 @@ h1, h2, h3, h4, h5, h6, p{
   will-change: box-shadow,transform;
   font-size: 0.8em;
 }
+
+
+#button_submit{
+  display: none;
+  visibility: hidden;
+}
+
   
 .button:focus {
   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;

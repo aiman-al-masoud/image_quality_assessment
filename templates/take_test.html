@@ -19,7 +19,7 @@
 </head>
 
 
-<body onload="onStart()">
+<body >
     <h1 class="blue">Live image quality assessment session </h1>
     <article id="live-session-description">
         <h2>Description</h2>
@@ -61,7 +61,7 @@
     <form id="rating_form" name="rating_form" action="/done_take_test" method="POST">
 
         <!--for the user to input their email address before taking the test-->
-        <div id="email_section" hidden>
+        <div id="email_section">
             <p>Email address:</p>
             <input name="email_input" id="email_input" type="email" placeholder=""></input>        
             <!--TODO: request more user info? Expertise, Age, Gender...?-->
@@ -79,7 +79,7 @@
 
 
         <!--create the input part of this form, 5 scores from 1 to 5-->
-        <div id="radio_buttons_section">
+        <div id="radio_buttons_section" hidden display="none">
             
             <h3>Give this image a rating from 1 to 5:</h3>
             {% for i in range(1, 6) %}
@@ -95,7 +95,7 @@
         <!--this button displays the next image-->
         <button id="button_next" class="button" type="button" onclick="onNextPressed()">Next</button>
         <!--this button sends the form to the server.-->
-        <a href="/done_take_test"><button id="button_submit" class="button" type="submit">Done</button></a>
+        <a href="/done_take_test"><button id="button_submit" class="button" type="submit"  >Done</button></a>
 
 
         <!--store hidden key-value paris for: (image, rating).-->
