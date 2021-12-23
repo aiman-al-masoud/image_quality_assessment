@@ -24,4 +24,6 @@
 
 - Index the website with principal search engines (contact Amatofrancesco99)
 
-**Get this thing ready, by the first week of January 2022**
+- Think about three (or more) keywords to put in index .html
+
+** 🏅 Get this thing ready, by the first week of January 2022 🏅 **
