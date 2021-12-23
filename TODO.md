@@ -22,4 +22,4 @@
 
 - Improve description on take_test.html
 
-- **Get this thing ready, by the first week of January 2022**
+**Get this thing ready, by the first week of January 2022**
