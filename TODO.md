@@ -1,3 +1,5 @@
+# WHAT WE HAVE TO DO
+
 - Vote on a new domain-name.
 
 - Write the static part of the website, presenting and describing the results of the former experiments. Possibly, in an appealing way.
@@ -18,4 +20,8 @@
 
 - Put some presentations in repository/presentations folder
 
-- **Get this thing ready, by the first week of January 2022**
+- Improve description on take_test.html
+
+- Index the website with principal search engines (contact Amatofrancesco99)
+
+**Get this thing ready, by the first week of January 2022**

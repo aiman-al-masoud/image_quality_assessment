@@ -4,7 +4,7 @@
 
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
-This website is currently <a href="http://dcrstudentsunited.pythonanywhere.com/">LIVE AND REACHABLE</a> in an experimental form. We'll have to VOTE ON A NEW DOMAIN-NAME, and maybe create a new Pythonanywhere account for that. You can ask <a href="https://github.com/aiman-al-masoud">aiman</a> for the credentials to access the current Pythonanywhere account. We're using git to pull manually changes from this repo over to the Pythonanywhere server. 
+This website is currently <a href="http://dcrstudentsunited.pythonanywhere.com/">LIVE AND REACHABLE</a> in an experimental form. You can ask <a href="https://github.com/aiman-al-masoud">aiman</a> for the credentials to access the current Pythonanywhere account. We're using git to pull manually changes from this repo over to the Pythonanywhere server. 
 
 
 # IMPORTANT NOTICE (ABOUT FLASK, PLEASE READ IT): 
