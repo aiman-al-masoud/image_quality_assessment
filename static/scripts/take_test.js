@@ -16,17 +16,6 @@ function isEmailEntered(){
 }
 
 
-
-/**
- * Displays/Updates the currently selected rating.
- */
-function onRatingChanged(){
-    v = getChosenRating()
-    label = document.getElementById("chosen_rating")
-    label.innerHTML = v
-}
-
-
 /**
  * Get the currently selected rating.
  */
@@ -50,6 +39,7 @@ function onNextPressed(){
        showById("email_section")
        return 
    }else{
+       hideById("live-session-description")
        hideById("email_section")
    }
 
