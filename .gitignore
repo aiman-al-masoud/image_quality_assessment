@@ -136,7 +136,7 @@ dmypy.json
 static/images/
 
 # to avoid cluttering the repo with test data.
-#dynamic/
+dynamic/
 
 
 
