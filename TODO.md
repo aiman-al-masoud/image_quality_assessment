@@ -18,4 +18,6 @@
 
 - Put some presentations in repository/presentations folder
 
+- Improve description on take_test.html
+
 - **Get this thing ready, by the first week of January 2022**
