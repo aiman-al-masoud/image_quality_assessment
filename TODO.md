@@ -22,4 +22,6 @@
 
 - Improve description on take_test.html
 
+- Index the website with principal search engines (contact Amatofrancesco99)
+
 **Get this thing ready, by the first week of January 2022**
