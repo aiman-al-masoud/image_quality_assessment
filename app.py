@@ -57,17 +57,17 @@ def pull_and_refresh():
     """
     Pulls changes from origin and refreshes the server.
     """
-    log = [ f"triggered on {time()}" ]
+    #log = [ f"triggered on {time()}" ]
 
     process = subprocess.Popen(["git", "pull"], stdout=subprocess.PIPE, cwd="/home/siqa/mysite/image_quality_assessment")
-    log.append(process.communicate())
+    #log.append(process.communicate())
     process = subprocess.Popen(["touch", "/var/www/siqa_pythonanywhere_com_wsgi.py "], stdout=subprocess.PIPE)
-    log.append(process.communicate())
+    #log.append(process.communicate())
 
-    log_path = f"{app.root_path}/dynamic/latest_push.txt"
-    os.mknod(log_path)
-    with open(log_path, "w") as f:
-        f.write(str(log))
+    #log_path = f"{app.root_path}/dynamic/latest_push.txt"
+    #os.mknod(log_path)
+    #with open(log_path, "w") as f:
+    #    f.write(str(log))
 
 
 def get_pictures():
