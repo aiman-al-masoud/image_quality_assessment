@@ -17,22 +17,18 @@
 </head>
 
 <body>
-
+    
     <nav id="navbar" class="sticky">
-        <a class="active" href="http://csu.unipv.it/"><i class="fa fa-handshake-o"></i> CSU</a> 
-        <a href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
-        <a href="#content"><i class="fa fa-info-circle"></i> Content</a>
-        <a href="#download"><i class="fa fa-download"></i> Download</a>
-        <a href="#test"><i class="fa fa-line-chart"></i> Test</a>
+        {% include 'navbar.html' %}
     </nav>  
 
     <header id="header">
         <h1><span class="blue">S</span>ubjective <span class="blue">I</span>mage <span class="blue">Q</span>uality <span class="blue">A</span>ssessment</h1>
         <div id=container>
             <div id=flip>
-              <div><div>Live session</div></div>
-              <div><div>Image repository</div></div>
-              <div><div>Presentation results</div></div>
+                <div><div>Presentation results</div></div>
+                <div><div>Image repository</div></div>
+                <div><div>Live session</div></div>
             </div>
         </div>
         <br>
@@ -71,31 +67,9 @@
     </article> 
 
     <footer id="footer">
-        <span>
-            <div class="text">
-                <br>
-                <p>
-                  Made by:
-                  <span class="word">Aiman Al Masoud</span>
-                  <span class="word">Francesco Amato</span>
-                  <span class="word">Andrei Blindu</span>
-                  <span class="word">Mattia Bottini</span>
-                  <span class="word">Davide Lotito</span>
-                  <span class="word">Francesco Marinelli</span>
-                  <span class="word">Daniele Murer</span>
-                  <span class="word">Riccardo Petri</span>
-                  <span class="word">Fabio Tagliani</span>
-                </p>
-            </div>
-            Università degli Studi di Pavia
-            <br>
-            Digital Content Retrieval Laboratory &copy; 2022 
-        </span>
+        {% include 'footer.html' %}
     </footer>
 
 </body>
-
-<!-- Animation for authors names -->
-<script src="{{url_for('static', filename='scripts/contributors_animation.js')}}"></script>
 
 </html>

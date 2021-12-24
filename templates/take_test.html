@@ -20,6 +20,11 @@
 
 
 <body onload="onStart()">
+
+    <nav id="navbar" class="sticky">
+        {% include 'navbar.html' %}
+    </nav>  
+
     <h1 class="blue">Live image quality assessment session </h1>
     <article id="live-session-description">
         <h2>Description</h2>
@@ -96,7 +101,7 @@
         <button id="button_next" class="button" type="button" onclick="onNextPressed()">Next</button>
         <!--this button sends the form to the server.-->
         <a href="/done_take_test"><button id="button_submit" class="button" type="submit">Done</button></a>
-
+        <br><br>
 
         <!--store hidden key-value paris for: (image, rating).-->
         {% for pic in pictures%}
@@ -106,8 +111,9 @@
 
     </form>
 
-
+    <footer id="footer">
+        {% include 'footer.html' %}
+    </footer>
 
 </body>
-
 </html>

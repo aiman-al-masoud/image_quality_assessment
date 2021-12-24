@@ -18,7 +18,7 @@ hr {
 #navbar {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 100%;
-  background-color: rgb(20, 20, 20);
+  background-color: #333333;
   overflow: auto;
 }
 
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 #flip div:first-child {
-  animation: show 9s linear infinite;
+  animation: show 10s linear infinite;
 }
 
 @keyframes show {
