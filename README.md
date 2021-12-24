@@ -4,7 +4,7 @@
 
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
-This website is currently <a href="http://siqa.pythonanywhere.com//">LIVE AND REACHABLE</a> in an experimental form. We're using git to pull manually changes from this repo over to the Pythonanywhere server. 
+This website is currently <a href="http://siqa.pythonanywhere.com//">LIVE AND REACHABLE</a> in an experimental form. Be VERY CAREFUL when you push anything to this repo, as the WEBHOOK THAT AUTOMATICALLY REFRESHES THE SERVER may be active at any time.
 
 
 # IMPORTANT NOTICE (ABOUT FLASK, PLEASE READ IT): 
