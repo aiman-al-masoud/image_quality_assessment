@@ -42,6 +42,32 @@ def on_done_take_test():
 
 
 
+@app.route("/webhook", methods=["POST", "GET"])
+def on_webhook():
+
+    """
+    Triggered by a GitHub webhook whenever someone pushes a commit on the repo.
+    """
+    pull_and_refresh()
+
+
+def pull_and_refresh():
+
+    """
+    Pulls changes from origin and refreshes the server.
+    """
+    log = [ f"triggered on {time()}" ]
+
+    process = subprocess.Popen(["git", "pull"], stdout=subprocess.PIPE, cwd="/home/siqa/mysite/image_quality_assessment")
+    log.append(process.communicate())
+    process = subprocess.Popen(["touch", "/var/www/siqa_pythonanywhere_com_wsgi.py "], stdout=subprocess.PIPE)
+    log.append(process.communicate())
+
+    log_path = f"{app.root_path}/dynamic/latest_push.txt"
+    os.mknod(log_path)
+    with open(log_path, "w") as f:
+        f.write(str(log))
+
 
 def get_pictures():
     """
