@@ -1,7 +1,5 @@
 # WHAT WE HAVE TO DO
 
-- Vote on a new domain-name.
-
 - Write the static part of the website, presenting and describing the results of the former experiments. Possibly, in an appealing way.
 
 - Write the part that dynamically produces graphs/dashboards from user-generated data.

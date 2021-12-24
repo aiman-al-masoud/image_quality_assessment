@@ -1,8 +1,6 @@
 /**
- * This file defines a few functions that will be run on the user's computer
- * while he's going through the form.
+ * These functions run on the client's computer while he's going through the form in take_test.html.
  */
-
 
 
 /**
@@ -138,13 +136,6 @@ function showById(id){
     element = document.getElementById(id)
     element.style.visibility="visible"
     element.style.display="inline-block"
-}
-
-
-function onStart(id){
-    showById("email_section")
-    hideById("radio_buttons_section")
-    hideById("button_submit")
 }
 
 
