@@ -10,7 +10,8 @@
 function isEmailEntered(){
     var email = document.getElementById("email_input").value
     console.log(email)
-    return !!email
+    var re = /\S+@\S+\.\S+/ 
+    return re.test(email)
 }
 
 
