@@ -21,7 +21,7 @@ hr {
   padding-bottom: 0px;
   background-color: #333333;
   overflow: auto;
-  opacity: 1;
+  z-index: 999; /* Put navbar in front of everything */
 }
 
 .logo-img{
@@ -76,7 +76,29 @@ hr {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 175%;
+}
+
+h2 {
+  font-size: 145%;
+}
+
+h3 {
+  font-size: 130%;
+}
+
+h4 {
+  font-size: 115%;
+}
+
+
+h5 {
+  font-size: 105%;
+}
+
+
+h6,p {
+  font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -268,39 +290,33 @@ label{
 
 /* ========================================================Responsive================================================== */
 
-/* Phones -- From screens larger than 320px the behaviour is not controlled */
+/* Phones -- From screens larger than 330px the behaviour is not controlled */
 @media screen and (min-width:0px) and (max-width:459px) {
-  h1{
-    font-size:1em;
-  }
   
   #header{
     padding: 30% 0% 15%;
-    background-size: 300%;
+    background-size: 330%;
   }
 
   #navbar a {
-    padding: 12px 0px 9px;
-    font-size: 10px;
-    width: 60px;
+    padding: 14px 0px 13px;
+    font-size: 11px;
+    width: 65px;
   }
 
   #navbar a-Active {
-    padding: 9px 1px 9px;
-    font-size: 10px;
-    width: 60px;
+    padding: 14px 0px 12px;
+    font-size: 11px;
+    width: 54px;
   }
 }
 
 /* Larger phones */
 @media screen and (min-width:460px) and (max-width:599px) {
-  h1{
-    font-size:1em;
-  }
-  
+
   #header{
     padding: 25% 0% 15%;
-    background-size: 200%;
+    background-size: 220%;
   }
 
   #navbar a {
@@ -318,10 +334,7 @@ label{
 
 /* Mini-tablet */
 @media screen and (min-width:600px) and (max-width:700px) {
-  h1{
-    font-size:1.2em;
-  }
-  
+
   #header{
     padding: 22% 0% 15%;
     background-size: 180%;
@@ -340,6 +353,7 @@ label{
 
 /* Tablets */
 @media screen and (min-width:701px) and (max-width:799px) {
+
   #header{
     padding: 22% 0% 10%;
     background-size: 165%;
