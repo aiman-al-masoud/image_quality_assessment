@@ -8,7 +8,7 @@
  * @returns 
  */
 function isEmailEntered(){
-    email = document.getElementById("email_input").value
+    var email = document.getElementById("email_input").value
     console.log(email)
     return !!email
 }
@@ -19,6 +19,7 @@ function isEmailEntered(){
  */
 function getChosenRating(){
 
+    var v;
     try{
         v = document.querySelector('input[name="rating_score"]:checked').id
     }catch{return null}
@@ -43,7 +44,7 @@ function onNextPressed(){
 
 
     // get the image that's currently on the user's display
-    im =  getCurrentImage()
+    var im =  getCurrentImage()
 
     //if there's no image yet, show the first (id="1") and halt.
     if(im==undefined || im ==null){
@@ -83,9 +84,9 @@ function onNextPressed(){
  */
 function commitRating(image_id, rating){
  
-    parts = image_id.split("/")
-    id = "/"+parts.at(-3)+"/"+parts.at(-2)+"/"+parts.at(-1)
-    e = document.getElementById(id  )
+    var parts = image_id.split("/")
+    var id = "/"+parts.at(-3)+"/"+parts.at(-2)+"/"+parts.at(-1)
+    var e = document.getElementById(id  )
     e.value = rating
 
 }
@@ -108,7 +109,7 @@ function isHidden(el) {
  * (The first image (from above) that isn't hidden).
  */
 function getCurrentImage(){
-    images = document.getElementById("images_div").getElementsByTagName("img")
+    var images = document.getElementById("images_div").getElementsByTagName("img")
     for (let im of images){
         if(!isHidden(im)){ return im }
     }
@@ -127,13 +128,13 @@ function showImageById(id){
 }
 
 function hideById(id){
-    element = document.getElementById(id)
+    var element = document.getElementById(id)
     element.style.display="none"
     element.style.visibility="hidden"
 }
 
 function showById(id){
-    element = document.getElementById(id)
+    var element = document.getElementById(id)
     element.style.visibility="visible"
     element.style.display="inline-block"
 }
