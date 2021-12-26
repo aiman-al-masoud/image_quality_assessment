@@ -41,8 +41,10 @@
 
         <!--for the user to input their email address before taking the test-->
         <div id="email_section">
-            <p>Email address:</p>
-            <input name="email_input" id="email_input" type="email" placeholder=""></input>        
+            <p>
+                Email address:
+                <input name="email_input" id="email_input" type="email" placeholder=""></input> 
+            </p>       
             <!--TODO: request more user info? Expertise, Age, Gender...?-->
         </div>
 
@@ -50,9 +52,11 @@
         <!--create as many hidden pictures as the paths passed to this template-->
         <div id="images_div">
             {% for pic in pictures%}
-                <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
-                <br>
-                <img hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
+                <p>
+                    <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
+                    <br>
+                    <img hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
+                </p>
             {% endfor %}
         </div>
 
@@ -69,7 +73,7 @@
             <label id="chosen_rating" for="rating_score"></label>
 
             </div>
-        <br>
+        <br><br>
 
         <!--this button displays the next image-->
         <button id="button_next" class="button" type="button" onclick="onNextPressed()">Next</button>

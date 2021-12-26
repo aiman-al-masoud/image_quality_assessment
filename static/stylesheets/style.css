@@ -105,6 +105,10 @@ h1, h2, h3, h4, h5, h6, p{
   color: rgb(241, 241, 241);
 }
 
+p {
+  width: 80%;
+}
+
 #container {
   font-size:26px;
   position: relative;
@@ -292,7 +296,7 @@ label{
 
 /* Phones -- From screens larger than 330px the behaviour is not controlled */
 @media screen and (min-width:0px) and (max-width:459px) {
-  
+
   #header{
     padding: 30% 0% 15%;
     background-size: 330%;
