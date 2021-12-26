@@ -12,8 +12,6 @@
 
 - Write credits, general info, and other documentation. 
 
-- Share the same navbar and footer to all templates
-
 - Put all our grey-level images in repository/images (referred to Daniele, Davide, Francesco M., ...)
 
 - Put some presentations in repository/presentations folder
@@ -23,5 +21,7 @@
 - Index the website with principal search engines (contact Amatofrancesco99)
 
 - Think about three (or more) keywords to put in index .html
+
+- Fix responsive problems on take_test.html (related to the images width)
 
 🏅 **Get this thing ready, by the first week of January 2022** 🏅
