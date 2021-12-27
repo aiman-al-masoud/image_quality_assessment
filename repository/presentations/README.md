@@ -1,1 +1,2 @@
-Add here some of our presentations
+In this folder you can find all the presentations. 
+
