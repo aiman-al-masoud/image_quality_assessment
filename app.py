@@ -49,8 +49,8 @@ def on_webhook():
     """
     Triggered by a GitHub webhook whenever someone pushes a commit on the repo.
     """
-    pull_and_refresh()
-
+    #pull_and_refresh()
+    pass
 
 def pull_and_refresh():
 

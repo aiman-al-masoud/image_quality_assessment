@@ -25,3 +25,73 @@
 - Fix responsive problems on take_test.html (related to the images width)
 
 🏅 **Get this thing ready, by the first week of January 2022** 🏅
+
+
+
+***
+
+## Python Team
+
+Backend / Frontend (MOS plots)
+
+1) First plot: MOS for each image (MOS vs image), one line for each impairment
+2) Second plot: StdDev of MOS for each image, one line for each impairment
+3) Heatmap of individual scores for each evaluator and for each impairment (maybe?)
+
+### API endpoints
+
+#### URL: /get-mos-data
+
+Returned JSON:
+
+```json
+{
+    "names": [
+        "kitten",
+        "doggo",
+    ],
+    "original-image-mos": [
+        5,
+        4,
+        5
+    ],
+    "slightly-impaired-image-mos": [
+        5,
+        4,
+        5
+    ],
+    "heavily-impaired-image-mos": [
+        5,
+        4,
+        5
+    ]
+}
+```
+
+#### URL: /get-stddev-mos-data
+
+Returned JSON:
+
+```json
+{
+    "names": [
+        "kitten",
+        "doggo",
+    ],
+    "original-image-stddev-mos": [
+        0.5,
+        0.4,
+        0.5
+    ],
+    "slightly-impaired-image-stddev-mos": [
+        0.5,
+        0.4,
+        0.5
+    ],
+    "heavily-impaired-image-stddev-mos": [
+        0.5,
+        0.4,
+        0.5
+    ]
+}
+```
