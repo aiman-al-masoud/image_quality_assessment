@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{url_for('static', filename='stylesheets/style.css')}}" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/favicon.ico')}}">
+
+    <script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>
     
     <title>SIQA - Graph Display</title>
 </head>
@@ -24,6 +26,6 @@
         {% include 'footer.html' %}
     </footer>
     
-    <script src="display_graph.js"></script>
+    <script src="{{url_for('static', filename='scripts/display_graphs.js')}}"></script>
 </body>
 </html>
