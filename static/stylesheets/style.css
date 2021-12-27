@@ -76,28 +76,33 @@ hr {
 }
 
 h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 175%;
 }
 
 h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 145%;
 }
 
 h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 130%;
 }
 
 h4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 115%;
 }
 
 
 h5 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 105%;
 }
 
-
 h6,p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 100%;
 }
 
@@ -106,7 +111,9 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 p {
-  width: 80%;
+  width: 85%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.6;
 }
 
 #container {
@@ -297,9 +304,9 @@ label{
 /* Phones -- From screens larger than 330px the behaviour is not controlled */
 @media screen and (min-width:0px) and (max-width:459px) {
 
-  #header{
-    padding: 30% 0% 15%;
-    background-size: 330%;
+  #header {
+    padding: 30% 6% 15%;
+    background-size: 350%;
   }
 
   #navbar a {
@@ -318,7 +325,7 @@ label{
 /* Larger phones */
 @media screen and (min-width:460px) and (max-width:599px) {
 
-  #header{
+  #header {
     padding: 25% 0% 15%;
     background-size: 220%;
   }
@@ -339,7 +346,7 @@ label{
 /* Mini-tablet */
 @media screen and (min-width:600px) and (max-width:700px) {
 
-  #header{
+  #header {
     padding: 22% 0% 15%;
     background-size: 180%;
   }
@@ -358,7 +365,7 @@ label{
 /* Tablets */
 @media screen and (min-width:701px) and (max-width:799px) {
 
-  #header{
+  #header {
     padding: 22% 0% 10%;
     background-size: 165%;
   }
@@ -366,7 +373,7 @@ label{
 
 /* Tablets */
 @media screen and (min-width:800px) and (max-width:999px) {
-  #header{
+  #header {
     padding: 18% 0% 6%;
     background-size: 150%;
   }
@@ -374,7 +381,7 @@ label{
 
 /* PCs */
 @media screen and (min-width:1000px) and (max-width:1219px) {
-  #header{
+  #header {
     padding: 15% 0% 6%;
     background-size: 150%;
   }
@@ -382,14 +389,68 @@ label{
 
 /* PCs */
 @media screen and (min-width:1220px) and (max-width:1399px){
-  #header{
+  
+  h1 {
+    font-size: 180%;
+  }
+  
+  h2 {
+    font-size: 165%;
+  }
+  
+  h3 {
+    font-size: 150%;
+  }
+  
+  h4 {
+    font-size: 135%;
+  }
+  
+  
+  h5 {
+    font-size: 120%;
+  }
+  
+  
+  h6,p {
+    font-size: 110%;
+  }  
+  
+  #header {
     background-size: 130%;
   }
 }
 
 /* Monitors */
 @media screen and (min-width:1400px) {
-  #header{
+
+  h1 {
+    font-size: 180%;
+  }
+  
+  h2 {
+    font-size: 165%;
+  }
+  
+  h3 {
+    font-size: 150%;
+  }
+  
+  h4 {
+    font-size: 135%;
+  }
+  
+  
+  h5 {
+    font-size: 120%;
+  }
+  
+  
+  h6,p {
+    font-size: 110%;
+  }  
+  
+  #header {
     background-size: 110%;
   }
 }
