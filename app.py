@@ -43,6 +43,12 @@ def on_done_take_test():
 
 
 
+@app.route("/get-mos-data")
+def on_mos_data():
+    pass
+
+
+
 @app.route("/webhook", methods=["POST", "GET"])
 def on_webhook():
 
