@@ -8,7 +8,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
         type: 'scatter',
         name: "Orginal Images",
         marker: {
-          color: 'green',
+          color: '#44d800',
           size: 12
         }
       };
@@ -36,15 +36,25 @@ function display(names, originals, imp1, imp2, div_name, title) {
       };
 
       var layout = {
-        title: title+' Graph',
+        paper_bgcolor: '#080808',
+        plot_bgcolor: '#080808',
         xaxis: {
-          title: 'Image Name'
+          title: 'Image Name',
+          color: 'rgb(241, 241, 241)',
+          gridcolor: '#444444' 
         },
         yaxis: {
-          title: title
+          title: title,
+          color: 'rgb(241, 241, 241)',
+          gridcolor: '#444444'
+        },
+        legend: {
+          font: {
+            color: 'rgb(241, 241, 241)'  
+          }
         }
       };
-      
+
       var data = [original_curve, impairment_1_curve, impairment_2_curve];
       
       Plotly.newPlot(div_name, data, layout);
@@ -76,6 +86,6 @@ window.onload = () => {
         let imp1 = json_data["slightly-impaired-image-stddev-mos"];
         let imp2 =json_data["heavily-impaired-image-stddev-mos"];
 
-        display(names, originals, imp1, imp2, "stddev_mos_graph_div", "StdDev");
+        display(names, originals, imp1, imp2, "stddev_mos_graph_div", "&#963;");
     });
 }
