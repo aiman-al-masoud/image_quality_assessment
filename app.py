@@ -56,14 +56,7 @@ def on_done_take_test():
         return "<a href='take_test'>Click here</a>"
 
 
-@app.route("/webhook", methods=["POST", "GET"])
-def on_webhook():
 
-    """
-    Triggered by a GitHub webhook whenever someone pushes a commit on the repo.
-    """
-    #pull_and_refresh()
-    pass
 
 @app.route("/get-mos-data", methods=["GET"])
 def get_mos_data():
@@ -117,22 +110,32 @@ def get_stddev_mos_data():
     }
     return json.dumps(values)
 
-def pull_and_refresh():
 
-    """
-    Pulls changes from origin and refreshes the server.
-    """
-    #log = [ f"triggered on {time()}" ]
 
-    process = subprocess.Popen(["git", "pull"], stdout=subprocess.PIPE, cwd="/home/siqa/mysite/image_quality_assessment")
-    #log.append(process.communicate())
-    process = subprocess.Popen(["touch", "/var/www/siqa_pythonanywhere_com_wsgi.py "], stdout=subprocess.PIPE)
-    #log.append(process.communicate())
+# @app.route("/webhook", methods=["POST", "GET"])
+# def on_webhook():
 
-    #log_path = f"{app.root_path}/dynamic/latest_push.txt"
-    #os.mknod(log_path)
-    #with open(log_path, "w") as f:
-    #    f.write(str(log))
+#     """
+#     Triggered by a GitHub webhook whenever someone pushes a commit on the repo.
+#     """
+#     #pull_and_refresh()
+#     pass
+# def pull_and_refresh():
+
+#     """
+#     Pulls changes from origin and refreshes the server.
+#     """
+#     #log = [ f"triggered on {time()}" ]
+
+#     process = subprocess.Popen(["git", "pull"], stdout=subprocess.PIPE, cwd="/home/siqa/mysite/image_quality_assessment")
+#     #log.append(process.communicate())
+#     process = subprocess.Popen(["touch", "/var/www/siqa_pythonanywhere_com_wsgi.py "], stdout=subprocess.PIPE)
+#     #log.append(process.communicate())
+
+#     #log_path = f"{app.root_path}/dynamic/latest_push.txt"
+#     #os.mknod(log_path)
+#     #with open(log_path, "w") as f:
+#     #    f.write(str(log))
 
 
 def get_pictures():
@@ -143,7 +146,6 @@ def get_pictures():
 
 
 
-
-# non serve:
+# breaks everything on the actual server:
 #app.run(host='localhost', port=5000)
 
