@@ -49,13 +49,6 @@ def on_done_take_test():
         return "<a href='take_test'>Click here</a>"
 
 
-
-@app.route("/get-mos-data")
-def on_mos_data():
-    pass
-
-
-
 @app.route("/webhook", methods=["POST", "GET"])
 def on_webhook():
 
@@ -68,7 +61,7 @@ def on_webhook():
 @app.route("/get-mos-data", methods=["GET"])
 def get_mos_data():
     values = {
-        "names": [
+    "names": [
         "kitten",
         "doggo",
         "bear"
@@ -97,6 +90,7 @@ def get_stddev_mos_data():
     "names": [
         "kitten",
         "doggo",
+        "bear"
     ],
     "original-image-stddev-mos": [
         0.5,
