@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static', filename='stylesheets/style.css')}}" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/favicon.ico')}}">
+    
+    <title>SIQA - Graph Display</title>
+</head>
+<body>
+
+    <nav id="navbar" class="sticky">
+        {% include 'navbar.html' %}
+    </nav>  
+
+    <div id="mos_graph_div"></div>
+
+    <div id="stddev_mos_graph_div"></div>
+    
+
+    <footer id="footer">
+        {% include 'footer.html' %}
+    </footer>
+    
+    <script src="display_graph.js"></script>
+</body>
+</html>
