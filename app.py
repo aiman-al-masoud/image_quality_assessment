@@ -141,5 +141,9 @@ def get_pictures():
     """
     return [f'/static/images/{n}' for n in os.listdir(app.static_folder+"/images")]
 
-app.run(host='localhost', port=5000)
+
+
+
+# non serve:
+#app.run(host='localhost', port=5000)
 
