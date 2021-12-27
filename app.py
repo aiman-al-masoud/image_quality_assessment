@@ -1,7 +1,7 @@
 # This is the back-end!
 #To start the server: python3 -m flask run
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 import re
 import os
 import pandas as pd
@@ -17,6 +17,13 @@ app.config["DEBUG"] = True
 def on_index():
     return render_template("index.html")
 
+@app.route("/Images.zip")
+def on_download_images():
+    return send_file("repository/images/Images.zip")
+
+@app.route("/Presentations.zip")
+def on_download_presentations():
+    return send_file("repository/presentations/Presentations.zip")
 
 @app.route("/take_test")
 def on_take_test():
