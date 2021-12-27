@@ -8,9 +8,12 @@ import pandas as pd
 from time import time
 import subprocess
 
+import json
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+CORS(app)
 
 
 @app.route("/")
@@ -31,6 +34,10 @@ def on_take_test():
     pictures = get_pictures()
     return render_template("take_test.html",  pictures=pictures)
 
+@app.route("/graph_display")
+def graph_display():
+    return render_template("graph_display.html")
+
 
 @app.route("/done_take_test", methods=["POST", "GET"])
 def on_done_take_test():
@@ -49,13 +56,6 @@ def on_done_take_test():
         return "<a href='take_test'>Click here</a>"
 
 
-
-@app.route("/get-mos-data")
-def on_mos_data():
-    pass
-
-
-
 @app.route("/webhook", methods=["POST", "GET"])
 def on_webhook():
 
@@ -64,6 +64,58 @@ def on_webhook():
     """
     #pull_and_refresh()
     pass
+
+@app.route("/get-mos-data", methods=["GET"])
+def get_mos_data():
+    values = {
+    "names": [
+        "kitten",
+        "doggo",
+        "bear"
+    ],
+    "original-image-mos": [
+        5,
+        4,
+        5
+    ],
+    "slightly-impaired-image-mos": [
+        4,
+        3,
+        4
+    ],
+    "heavily-impaired-image-mos": [
+        3,
+        2,
+        3
+    ]
+    }
+    return json.dumps(values)
+
+@app.route("/get-stddev-mos-data", methods=["GET"])
+def get_stddev_mos_data():
+    values = {
+    "names": [
+        "kitten",
+        "doggo",
+        "bear"
+    ],
+    "original-image-stddev-mos": [
+        0.5,
+        0.4,
+        0.5
+    ],
+    "slightly-impaired-image-stddev-mos": [
+        0.4,
+        0.3,
+        0.4
+    ],
+    "heavily-impaired-image-stddev-mos": [
+        0.3,
+        0.2,
+        0.3
+    ]
+    }
+    return json.dumps(values)
 
 def pull_and_refresh():
 
@@ -88,4 +140,6 @@ def get_pictures():
     Gets the paths of all of the pictures in the static images folder.
     """
     return [f'/static/images/{n}' for n in os.listdir(app.static_folder+"/images")]
+
+app.run(host='localhost', port=5000)
 
