@@ -20,7 +20,7 @@
 
 
 
-<body onload="onStart()">
+<body onload="onLoad()">
 
     <nav id="navbar" class="sticky">
         {% include 'navbar.html' %}
@@ -34,29 +34,31 @@
         <h2>Description</h2>
             {% include 'take_test_description.html' %}
 
-        <h2>Your data</h2>
+        
         
     </article>
     <form id="rating_form" name="rating_form" action="/done_take_test" method="POST">
 
+
+
         <!--for the user to input their email address before taking the test-->
+        <!--
         <div id="email_section">
+            <h2>Your data</h2>
             <p>
                 Email address:
                 <input name="email_input" id="email_input" type="email" placeholder=""></input> 
             </p>       
-            <!--TODO: request more user info? Expertise, Age, Gender...?-->
+            TODO: request more user info? Expertise, Age, Gender
         </div>
+        -->
 
 
         <!--create as many hidden pictures as the paths passed to this template-->
-        <div id="images_div">
+        <div id="images_div" style="padding: 0%;">
             {% for pic in pictures%}
-                <p>
-                    <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
-                    <br>
-                    <img hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
-                </p>
+                    <h2 hidden style="display: none;"  id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
+                    <img hidden style="display: none;"  hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
             {% endfor %}
         </div>
 
@@ -84,7 +86,7 @@
 
         <!--store hidden key-value paris for: (image, rating).-->
         {% for pic in pictures%}
-        <input type="hidden" id={{pic}} name={{pic}} value=""></input>
+        <input display="none" type="hidden" id={{pic}} name={{pic}} value=""></input>
         {% endfor%}
 
 

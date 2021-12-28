@@ -7,12 +7,14 @@
  * Checks if the email field is properly filled. 
  * @returns 
  */
+/*
 function isEmailEntered(){
     var email = document.getElementById("email_input").value
     console.log(email)
     var re = /\S+@\S+\.\S+/ 
     return re.test(email)
 }
+*/
 
 
 /**
@@ -34,7 +36,10 @@ function getChosenRating(){
 function onNextPressed(){
 
 
-   // keep on showing the email field and halting, until it's filled out with an email.
+   
+   /*
+    // keep on showing the email field and halting, until it's filled out with an email.
+
    if(!isEmailEntered()){
        showById("email_section")
        return 
@@ -42,6 +47,7 @@ function onNextPressed(){
        hideById("live-session-description")
        hideById("email_section")
    }
+   */
 
 
     // get the image that's currently on the user's display
@@ -140,6 +146,10 @@ function showById(id){
     element.style.display="inline-block"
 }
 
+function onLoad(){
+    showImageById("1")
+    showById("radio_buttons_section")
+}
 
 
 
