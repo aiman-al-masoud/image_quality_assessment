@@ -20,7 +20,7 @@
 
 
 
-<body onload="onLoad()">
+<body >
 
     <nav id="navbar" class="sticky">
         {% include 'navbar.html' %}
@@ -38,21 +38,6 @@
         
     </article>
     <form id="rating_form" name="rating_form" action="/done_take_test" method="POST">
-
-
-
-        <!--for the user to input their email address before taking the test-->
-        <!--
-        <div id="email_section">
-            <h2>Your data</h2>
-            <p>
-                Email address:
-                <input name="email_input" id="email_input" type="email" placeholder=""></input> 
-            </p>       
-            TODO: request more user info? Expertise, Age, Gender
-        </div>
-        -->
-
 
         <!--create as many hidden pictures as the paths passed to this template-->
         <div id="images_div" style="padding: 0%;">
@@ -78,9 +63,9 @@
         <br><br>
 
         <!--this button displays the next image-->
-        <button id="button_next" class="button" type="button" onclick="onNextPressed()">Next</button>
+        <button id="button_next" class="button" type="button" onclick="onNextPressed()">Start</button>
+        
         <!--this button sends the form to the server.-->
-
         <a href="/done_take_test"><button id="button_submit" class="button" type="submit">Done</button></a>
         <br><br>
 
