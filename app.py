@@ -20,14 +20,6 @@ CORS(app)
 def on_index():
     return render_template("index.html")
 
-@app.route("/Images.zip")
-def on_download_images():
-    return send_file("repository/images/Images.zip")
-
-@app.route("/Presentations.zip")
-def on_download_presentations():
-    return send_file("repository/presentations/Presentations.zip")
-
 @app.route("/take_test")
 def on_take_test():
     # TODO: try shuffling these pictures for each different user. Or filter out some images?
