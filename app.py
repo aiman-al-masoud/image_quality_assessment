@@ -68,18 +68,18 @@ def get_mos_stddev(img_type):
     cols = [col for col in database.columns if img_type in col]
     return database[cols].std(axis=0).to_list()
 
-def stats_getters_generator(stat_f):
+def stats_getters_generator(stat_f, stat_name):
     def getter():
         result = {}
         result["names"] = get_names()
-        result["original-image-mos"] = stat_f(ImageTypes.ORIGINAL)
-        result["slightly-impaired-image-mos"] = stat_f(ImageTypes.SLIGHTLY_IMPAIRED)
-        result["heavily-impaired-image-mos"] = stat_f(ImageTypes.HEAVILY_IMPAIRED)
+        result["original-image-" + stat_name] = stat_f(ImageTypes.ORIGINAL)
+        result["slightly-impaired-image-" + stat_name] = stat_f(ImageTypes.SLIGHTLY_IMPAIRED)
+        result["heavily-impaired-image-" + stat_name] = stat_f(ImageTypes.HEAVILY_IMPAIRED)
         return json.dumps(result)
     return getter
 
-get_mos_json = stats_getters_generator(get_mos)
-get_mos_stddev_json = stats_getters_generator(get_mos_stddev)
+get_mos_json = stats_getters_generator(get_mos, "mos")
+get_mos_stddev_json = stats_getters_generator(get_mos_stddev, "stddev-mos")
 
 
 

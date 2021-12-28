@@ -61,8 +61,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
 }
 
 window.onload = () => {
-  const url = 'https://siqa.pythonanywhere.com';
-  fetch(url + '/get-mos-data')
+  fetch('/get-mos-data')
   .then((response) => {
     return response.json();
   })
@@ -75,7 +74,7 @@ window.onload = () => {
     display(names, originals, imp1, imp2, "mos_graph_div", "MOS");
 });
 
-  fetch(url + '/get-stddev-mos-data')
+  fetch('/get-stddev-mos-data')
   .then((response) => {
     return response.json();
   })
@@ -85,6 +84,6 @@ window.onload = () => {
     let imp1 = json_data["slightly-impaired-image-stddev-mos"];
     let imp2 =json_data["heavily-impaired-image-stddev-mos"];
 
-    display(names, originals, imp1, imp2, "stddev_mos_graph_div", "&#963;");
+    display(names, originals, imp1, imp2, "stddev_mos_graph_div", "&#963; of MOS");
   });
 }
