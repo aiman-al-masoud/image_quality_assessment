@@ -18,22 +18,26 @@ CORS(app)
 
 database_filename = app.root_path + "/dynamic/ratings.csv"
 
+pic_names = [
+    "00_0", "00_1", "00_2",
+    "01_0", "01_1", "01_2",
+    "02_0", "02_1", "02_2",
+    "03_0", "03_1", "03_2",
+    "04_0", "04_1", "04_2",
+    "05_0", "05_1", "05_2",
+    "06_0", "06_1", "06_2",
+    "07_0", "07_1", "07_2",
+    "08_0", "08_1", "08_2",
+    "09_0", "09_1", "09_2"
+]
+
 try:
     database = pd.read_csv(database_filename)
 except:
-    database = pd.DataFrame(columns=["timestamp",
-        "00_0", "00_1", "00_2",
-        "01_0", "01_1", "01_2",
-        "02_0", "02_1", "02_2",
-        "03_0", "03_1", "03_2",
-        "04_0", "04_1", "04_2",
-        "05_0", "05_1", "05_2",
-        "06_0", "06_1", "06_2",
-        "07_0", "07_1", "07_2",
-        "08_0", "08_1", "08_2",
-        "09_0", "09_1", "09_2"
-    ])
-    database.to_csv(database_filename)
+    database = pd.DataFrame(columns=(["id", "timestamp"] + pic_names))
+
+database = database.astype("int64")
+database.set_index("id", inplace=True)
 
 def raw_data_to_record(raw_data):
     """
@@ -49,7 +53,10 @@ def append_to_database(raw_data):
     """
     global database
     new_record = raw_data_to_record(raw_data)
-    database = pd.concat([database, new_record], join='inner', ignore_index=True)
+    database_columns = database.columns
+    database = database.append(new_record, ignore_index=True)
+    database = database[database_columns]
+    database = database.astype("int64").rename_axis("id")
     database.to_csv(database_filename)
 
 class ImageTypes:
@@ -106,7 +113,7 @@ def on_done_take_test():
     if request.method == 'POST':
         f = request.form
         # form data + timestamp to identify user
-        raw_data = list(f.items(1)) + [("timestamp", int(time() * 1000))]
+        raw_data = [item for item in list(f.items(1)) if item[0] in pic_names] + [("timestamp", int(time() * 1000))]
         append_to_database(raw_data)
         return render_template("done_take_test.html")
 
