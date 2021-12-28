@@ -138,6 +138,5 @@ static/images/
 # to avoid cluttering the repo with test data.
 dynamic/
 
-# 
+# macOS Desktop Services Store
 .DS_Store
-repository/DS_Store
