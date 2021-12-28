@@ -62,6 +62,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
 
 window.onload = () => {
   const url = 'https://siqa.pythonanywhere.com';
+  //const url = "http://127.0.0.1:5000"
   fetch(url + '/get-mos-data')
   .then((response) => {
     return response.json();
