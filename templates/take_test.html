@@ -42,8 +42,12 @@
         <!--create as many hidden pictures as the paths passed to this template-->
         <div id="images_div" style="padding: 0%;">
             {% for pic in pictures%}
-                <h2 hidden style="display: none;"  id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
-                <img hidden style="display: none;" hidden id="{{loop.index}}" src="{{pic_path}}{{pic}}.jpg" data-pic="{{pic}}" alt="" height="400" />
+                <div>
+                    <h4 hidden style="display: none;"  id="title_{{loop.index}}">Image number: {{loop.index}}</h4>
+                </div>
+                <div>
+                    <img hidden style="display: none;" hidden id="{{loop.index}}" src="{{pic_path}}{{pic}}.jpg" data-pic="{{pic}}" alt="" height="400" />
+                </div>
             {% endfor %}
         </div>
 
@@ -51,7 +55,7 @@
         <!--create the input part of this form, 5 scores from 1 to 5-->
         <div id="radio_buttons_section" hidden display="none">
             
-            <h3>Give this image a rating from 1 to 5:</h3>
+            <h5>Give this image a quality rate from 1 to 5:</h5>
             {% for i in range(1, 6) %}
             <label for="{{i}}">{{i}}</label>
             <input type="radio" id={{i}} name="rating_score">
