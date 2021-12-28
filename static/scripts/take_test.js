@@ -2,7 +2,6 @@
  * These functions run on the client's computer while he's going through the form in take_test.html.
  */
 
-
 /**
  * Checks if the email field is properly filled. 
  * @returns 
@@ -13,7 +12,6 @@ function isEmailEntered(){
     var re = /\S+@\S+\.\S+/ 
     return re.test(email)
 }
-
 
 /**
  * Get the currently selected rating.
@@ -27,22 +25,18 @@ function getChosenRating(){
     return v;
 }
 
-
 /**
  * Implements the behavior of the 'next' button.
  */
 function onNextPressed(){
-
-
-   // keep on showing the email field and halting, until it's filled out with an email.
-   if(!isEmailEntered()){
-       showById("email_section")
-       return 
-   }else{
-       hideById("live-session-description")
-       hideById("email_section")
-   }
-
+    // keep on showing the email field and halting, until it's filled out with an email.
+    if(!isEmailEntered()){
+        showById("email_section")
+        return 
+    }else{
+        hideById("live-session-description")
+        hideById("email_section")
+    }
 
     // get the image that's currently on the user's display
     var im =  getCurrentImage()
@@ -56,8 +50,7 @@ function onNextPressed(){
     }
 
     //save the chosen rating for the current image
-    commitRating(im.src, getChosenRating())
-
+    commitRating(im.getAttribute("data-pic"), getChosenRating())
 
     //clear previous rating
     document.querySelector('input[name="rating_score"]:checked').checked=false
@@ -84,15 +77,9 @@ function onNextPressed(){
  * @param {number} rating 
  */
 function commitRating(image_id, rating){
- 
-    var parts = image_id.split("/")
-    var id = "/"+parts.at(-3)+"/"+parts.at(-2)+"/"+parts.at(-1)
-    var e = document.getElementById(id  )
+    var e = document.getElementById(image_id)
     e.value = rating
-
 }
-
-
 
 /**
  * Checks if an element is hidden.
@@ -104,7 +91,6 @@ function isHidden(el) {
     return ((style.display === 'none') || (style.visibility === 'hidden'))
 }
 
-
 /**
  * Get the currently displayed image.
  * (The first image (from above) that isn't hidden).
@@ -115,8 +101,6 @@ function getCurrentImage(){
         if(!isHidden(im)){ return im }
     }
 }
-
-
 
 function hideImageById(id){
     hideById(id)
@@ -139,9 +123,3 @@ function showById(id){
     element.style.visibility="visible"
     element.style.display="inline-block"
 }
-
-
-
-
-
-

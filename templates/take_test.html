@@ -20,7 +20,7 @@
 
 
 
-<body onload="onStart()">
+<body>
 
     <nav id="navbar" class="sticky">
         {% include 'navbar.html' %}
@@ -55,7 +55,7 @@
                 <p>
                     <h2 hidden id="title_{{loop.index}}">Image number: {{loop.index}}</h2>
                     <br>
-                    <img hidden id="{{loop.index}}" src={{pic}} alt="" height="400" />
+                    <img hidden id="{{loop.index}}" src="{{pic_path}}{{pic}}.jpg" data-pic="{{pic}}" alt="" height="400" />
                 </p>
             {% endfor %}
         </div>
@@ -84,7 +84,7 @@
 
         <!--store hidden key-value paris for: (image, rating).-->
         {% for pic in pictures%}
-        <input type="hidden" id={{pic}} name={{pic}} value=""></input>
+        <input type="hidden" id="{{pic}}" name="{{pic}}" value=""></input>
         {% endfor%}
 
 
