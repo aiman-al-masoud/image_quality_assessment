@@ -138,5 +138,6 @@ static/images/
 # to avoid cluttering the repo with test data.
 dynamic/
 
-
-
+# 
+.DS_Store
+repository/DS_Store
