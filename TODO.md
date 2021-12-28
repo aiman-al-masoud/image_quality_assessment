@@ -47,23 +47,20 @@ Returned JSON:
 ```json
 {
     "names": [
-        "kitten",
-        "doggo",
+        "00",
+        "01"
     ],
     "original-image-mos": [
         5,
-        4,
-        5
+        4
     ],
     "slightly-impaired-image-mos": [
-        5,
-        4,
-        5
+        3,
+        2
     ],
     "heavily-impaired-image-mos": [
-        5,
-        4,
-        5
+        2,
+        1
     ]
 }
 ```
@@ -75,23 +72,20 @@ Returned JSON:
 ```json
 {
     "names": [
-        "kitten",
-        "doggo",
+        "00",
+        "01"
     ],
     "original-image-stddev-mos": [
         0.5,
-        0.4,
-        0.5
+        0.4
     ],
     "slightly-impaired-image-stddev-mos": [
         0.5,
-        0.4,
-        0.5
+        0.4
     ],
     "heavily-impaired-image-stddev-mos": [
         0.5,
-        0.4,
-        0.5
+        0.4
     ]
 }
 ```
