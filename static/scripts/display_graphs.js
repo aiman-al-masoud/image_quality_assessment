@@ -39,7 +39,6 @@ function display(names, originals, imp1, imp2, div_name, title) {
     paper_bgcolor: '#080808',
     plot_bgcolor: '#080808',
     xaxis: {
-      title: 'Image Name',
       titlefont: {
         color: 'rgb(241, 241, 241)',
       },
