@@ -29,8 +29,6 @@ function onNextPressed(){
         showImageById("1")
         showById("radio_buttons_section")
         document.getElementById("button_next").innerHTML = "Next"
-
-        //document.getElementById("button_next").innerHTML = "Invano"
         hideById("live-session-description")
         return
     }
@@ -46,14 +44,15 @@ function onNextPressed(){
     //switch to displaying the next image
     hideImageById(im.id)
 
+    if (im.id == document.getElementsByTagName("img").length) {
+        document.getElementById("button_next").innerHTML = "Done";
+    }
+
     try{
         showImageById(parseInt(im.id)+1)
     }catch{
         //if that's the last image, show the done button.
-        //showById("button_submit")
         document.forms["rating_form"].submit()
-        hideById("button_next")
-        hideById("radio_buttons_section")
     }    
 
 }
