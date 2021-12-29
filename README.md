@@ -16,7 +16,7 @@ Our website <a href="https://siqa.pythonanywhere.com"><strong>https://siqa.pytho
 
 <a href="https://drive.google.com/drive/u/0/folders/1ZDRg8D5K_DEcfJJ53cfSIqqAd4NA7zIm"><strong>WATCH PREVIEW VIDEO</strong></a>
 
-![all-devices-black](https://user-images.githubusercontent.com/80333091/147678694-2a05e95c-a732-421d-80af-449cfdbf1667.png)
+![all-devices-black](https://user-images.githubusercontent.com/80333091/147682077-4fb7e86a-fec7-421f-bec7-be3113c729d3.png)
 
 ***
 
