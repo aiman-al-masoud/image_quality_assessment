@@ -44,15 +44,23 @@ function display(names, originals, imp1, imp2, div_name, title) {
       },
       color: 'rgb(192, 192, 192)',
       gridcolor: '#444444',
+      zerolinecolor: '#444444',
       tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
       ticktext: ['Books', 'Water', 'Tiger', 'Dogs', 'Hand', 'Mountains', 'Tree', 'London', 'Poppies', 'Bear'],
-      tickangle: -25
+      tickfont: {
+        size: 10
+      },
+      tickangle: -35
     },
     yaxis: {
       title: title,
       titlefont: {
         color: 'rgb(241, 241, 241)'
       },
+      tickfont: {
+        size: 10
+      },
+      zerolinecolor: '#444444',
       color: 'rgb(192, 192, 192)',
       gridcolor: '#444444'
     },
