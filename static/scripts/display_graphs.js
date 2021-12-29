@@ -6,7 +6,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
       x: names,
       y: originals,
       type: 'scatter',
-      name: "Orginal Images",
+      name: "Orginal",
       marker: {
         color: '#44d800',
         size: 12
@@ -17,7 +17,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
     x: names,
     y: imp1,
     type: 'scatter',
-    name: "Impairment 1 Images",
+    name: "Impairment 1",
     marker: {
       color: 'orange',
       size: 12
@@ -28,7 +28,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
     x: names,
     y: imp2,
     type: 'scatter',
-    name: "Impairment 2 Images",
+    name: "Impairment 2",
     marker: {
       color: 'red',
       size: 12
@@ -47,7 +47,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
       gridcolor: '#444444',
       tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
       ticktext: ['Books', 'Water', 'Tiger', 'Dogs', 'Hand', 'Mountains', 'Tree', 'London', 'Poppies', 'Bear'],
-      tickangle: -45
+      tickangle: -25
     },
     yaxis: {
       title: title,
@@ -58,8 +58,9 @@ function display(names, originals, imp1, imp2, div_name, title) {
       gridcolor: '#444444'
     },
     legend: {
+      orientation: "h",
       font: {
-        color: 'rgb(241, 241, 241)'
+        color: 'rgb(241, 241, 241)',
       }
     }
   };
