@@ -29,7 +29,7 @@ function onNextPressed(){
         showImageById("1")
         showById("radio_buttons_section")
         document.getElementById("button_next").innerHTML = "Next"
-        hideById("description_take_test")
+        hideById("live-session-description")
         return
     }
 
