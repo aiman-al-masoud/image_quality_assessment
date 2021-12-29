@@ -1,14 +1,30 @@
-# image_quality_assesment
+# IMAGE QUALITY ASSESSMENT
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/aiman-al-masoud/image_quality_assessment/blob/main/LICENSE)
-![](https://komarev.com/ghpvc/?username=ImageQualityAssessment&label=Views&style=plastic&color=brightgreen)
+![](https://komarev.com/ghpvc/?username=SIQA&label=Views&style=plastic&color=brightgreen)
+
+![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
-This website is currently <a href="http://siqa.pythonanywhere.com//">LIVE AND REACHABLE</a> in an experimental form. Be VERY CAREFUL when you push anything to this repo, as the WEBHOOK THAT AUTOMATICALLY REFRESHES THE SERVER may be active at any time.
+Our website <a href="https://siqa.pythonanywhere.com"><strong>https://siqa.pythonanywhere.com</strong></a> is currently live and reachable. 
 
+<a href="https://drive.google.com/drive/u/0/folders/1ZDRg8D5K_DEcfJJ53cfSIqqAd4NA7zIm"><strong>WATCH PREVIEW VIDEO</strong></a>
 
-# IMPORTANT NOTICE (ABOUT FLASK, PLEASE READ IT): 
+![all-devices-black](https://user-images.githubusercontent.com/80333091/147678694-2a05e95c-a732-421d-80af-449cfdbf1667.png)
+
+***
+
+Be VERY CAREFUL when you push anything to this repo, as the WEBHOOK THAT AUTOMATICALLY REFRESHES THE SERVER may be active at any time.
+
+***
+
+# IMPORTANT NOTICE (about flask, please read it): 
 
 <a href="https://en.wikipedia.org/wiki/Flask_(web_framework)">Flask</a> is the Python web-framework currently being used to develop the back-end of this website. It's simple and easy to use if you know some basic Python. 
 
