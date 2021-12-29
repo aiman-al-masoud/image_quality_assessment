@@ -46,7 +46,7 @@
                     <h4 hidden style="display: none;"  id="title_{{loop.index}}">Image number: {{loop.index}}</h4>
                 </div>
                 <div>
-                    <img hidden style="display: none;" hidden id="{{loop.index}}" src="{{pic_path}}{{pic}}.jpg" data-pic="{{pic}}" alt="" height="400" />
+                    <img hidden style="display: none;" hidden id="{{loop.index}}" src="{{pic_path}}{{pic}}.jpg" data-pic="{{pic}}" alt="" class="img_responsive" />
                 </div>
             {% endfor %}
         </div>
@@ -55,10 +55,13 @@
         <!--create the input part of this form, 5 scores from 1 to 5-->
         <div id="radio_buttons_section" hidden display="none">
             
-            <h5>Give this image a quality rate from 1 to 5:</h5>
+            <h6>Give this image a quality rate from 1 to 5:<h6>
             {% for i in range(1, 6) %}
-            <label for="{{i}}">{{i}}</label>
-            <input type="radio" id={{i}} name="rating_score">
+                <label class= "space" for="{{i}}">{{i}}</label>
+            {% endfor %}
+            <br>
+            {% for i in range(1, 6) %}
+                <input type="radio" id={{i}} name="rating_score">
             {% endfor %}
             <br>
             <label id="chosen_rating" for="rating_score"></label>

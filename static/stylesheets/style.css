@@ -301,12 +301,23 @@ p {
 
 label{
   color: rgb(241, 241, 241);
+  font-size: medium;
+}
+
+.space {
+  padding-left: 2.2%;
+  padding-right: 2.2%;
 }
 
 /* ========================================================Responsive================================================== */
 
 /* Phones -- From screens larger than 330px the behaviour is not controlled */
 @media screen and (min-width:0px) and (max-width:459px) {
+
+  .img_responsive {
+    max-width: 95%;
+    height: 100%;
+  }
 
   #header {
     padding: 30% 6% 15%;
@@ -329,6 +340,11 @@ label{
 /* Larger phones */
 @media screen and (min-width:460px) and (max-width:599px) {
 
+  .img_responsive {
+    max-width: 85%;
+    height: 90%;
+  }
+
   #header {
     padding: 25% 0% 15%;
     background-size: 220%;
@@ -350,6 +366,11 @@ label{
 /* Mini-tablet */
 @media screen and (min-width:600px) and (max-width:700px) {
 
+  .img_responsive {
+    max-width: 80%;
+    height: 85%;
+  }
+
   #header {
     padding: 22% 0% 15%;
     background-size: 180%;
@@ -369,6 +390,11 @@ label{
 /* Tablets */
 @media screen and (min-width:701px) and (max-width:799px) {
 
+  .img_responsive {
+    max-width: 75%;
+    height: 80%;
+  }
+
   #header {
     padding: 22% 0% 10%;
     background-size: 165%;
@@ -377,6 +403,11 @@ label{
 
 /* Tablets */
 @media screen and (min-width:800px) and (max-width:999px) {
+  .img_responsive {
+    max-width: 65%;
+    height: 70%;
+  }
+
   #header {
     padding: 18% 0% 6%;
     background-size: 150%;
@@ -385,15 +416,31 @@ label{
 
 /* PCs */
 @media screen and (min-width:1000px) and (max-width:1219px) {
+
+  .img_responsive {
+    max-width: 70%;
+    height: 75%;
+  }
+
   #header {
     padding: 15% 0% 6%;
     background-size: 150%;
+  }
+
+  .space {
+    padding-left: 2.1%;
+    padding-right: 2.1%;
   }
 }
 
 /* PCs */
 @media screen and (min-width:1220px) and (max-width:1399px){
-  
+
+  .img_responsive {
+    max-width: 50%;
+    height: 55%;
+  }
+
   h1 {
     font-size: 180%;
   }
@@ -423,10 +470,20 @@ label{
   #header {
     background-size: 130%;
   }
+
+  .space {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }
 
 /* Monitors */
 @media screen and (min-width:1400px) {
+
+  .img_responsive {
+    max-width: 50%;
+    height: 55%;
+  }
 
   h1 {
     font-size: 180%;
@@ -456,5 +513,10 @@ label{
   
   #header {
     background-size: 110%;
+  }
+
+  .space {
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }
