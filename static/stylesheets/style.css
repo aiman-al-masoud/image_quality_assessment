@@ -316,7 +316,7 @@ label{
 
   .img_responsive {
     max-width: 95%;
-    height: 100%;
+    max-height: 100%;
   }
 
   #header {
@@ -342,7 +342,7 @@ label{
 
   .img_responsive {
     max-width: 85%;
-    height: 90%;
+    max-height: 90%;
   }
 
   #header {
@@ -368,7 +368,7 @@ label{
 
   .img_responsive {
     max-width: 80%;
-    height: 85%;
+    max-height: 85%;
   }
 
   #header {
@@ -392,7 +392,7 @@ label{
 
   .img_responsive {
     max-width: 75%;
-    height: 80%;
+    max-height: 80%;
   }
 
   #header {
@@ -405,7 +405,7 @@ label{
 @media screen and (min-width:800px) and (max-width:999px) {
   .img_responsive {
     max-width: 65%;
-    height: 70%;
+    max-height: 70%;
   }
 
   #header {
@@ -419,7 +419,7 @@ label{
 
   .img_responsive {
     max-width: 60%;
-    height: 65%;
+    max-height: 65%;
   }
 
   #header {
@@ -438,7 +438,7 @@ label{
 
   .img_responsive {
     max-width: 50%;
-    height: 55%;
+    max-height: 55%;
   }
 
   h1 {
@@ -482,7 +482,7 @@ label{
 
   .img_responsive {
     max-width: 50%;
-    height: 55%;
+    max-height: 55%;
   }
 
   h1 {
