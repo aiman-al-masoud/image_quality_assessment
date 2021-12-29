@@ -418,8 +418,8 @@ label{
 @media screen and (min-width:1000px) and (max-width:1219px) {
 
   .img_responsive {
-    max-width: 70%;
-    height: 75%;
+    max-width: 60%;
+    height: 65%;
   }
 
   #header {
