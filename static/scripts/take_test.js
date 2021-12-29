@@ -44,8 +44,12 @@ function onNextPressed(){
     //switch to displaying the next image
     hideImageById(im.id)
 
-    // -1 because the logo image is counted as an image
-    if (im.id == (document.getElementsByTagName("img").length - 1)) {
+    // -1 because the logo image is counted as an image, -1 because of 0 or 1 
+    var l = document.getElementsByTagName("img").length - 2
+
+    console.log(`current image: ${im.id}`)
+    console.log(`tot img ${l}`)
+    if (im.id ==l) {
         document.getElementById("button_next").innerHTML = "Done";
     }
 
