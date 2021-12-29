@@ -44,7 +44,8 @@ function onNextPressed(){
     //switch to displaying the next image
     hideImageById(im.id)
 
-    if (im.id == document.getElementsByTagName("img").length) {
+    // -1 because the logo image is counted as an image
+    if (im.id == (document.getElementsByTagName("img").length - 1)) {
         document.getElementById("button_next").innerHTML = "Done";
     }
 
