@@ -40,12 +40,21 @@ function display(names, originals, imp1, imp2, div_name, title) {
     plot_bgcolor: '#080808',
     xaxis: {
       title: 'Image Name',
-      color: 'rgb(241, 241, 241)',
-      gridcolor: '#444444'
+      titlefont: {
+        color: 'rgb(241, 241, 241)',
+      },
+      color: 'rgb(192, 192, 192)',
+      gridcolor: '#444444',
+      tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      ticktext: ['Books', 'Water', 'Tiger', 'Dogs', 'Hand', 'Mountains', 'Tree', 'London', 'Poppies', 'Bear'],
+      tickangle: -45
     },
     yaxis: {
       title: title,
-      color: 'rgb(241, 241, 241)',
+      titlefont: {
+        color: 'rgb(241, 241, 241)'
+      },
+      color: 'rgb(192, 192, 192)',
       gridcolor: '#444444'
     },
     legend: {
