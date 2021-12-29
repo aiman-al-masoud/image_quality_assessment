@@ -7,7 +7,7 @@ import os
 import pandas as pd
 from time import time
 import subprocess
-from random import randint
+import random
 
 import json
 from flask_cors import CORS
@@ -88,6 +88,14 @@ def stats_getters_generator(stat_f, stat_name):
 get_mos_json = stats_getters_generator(get_mos, "mos")
 get_mos_stddev_json = stats_getters_generator(get_mos_stddev, "stddev-mos")
 
+def get_pictures():
+    """
+    Returns the names of the pictures in the static images folder in random order.
+    """
+    names = [pic[:-4] for pic in os.listdir(app.static_folder + "/images")]
+    random.shuffle(names)
+    return names
+
 
 
 @app.route("/")
@@ -96,9 +104,7 @@ def on_index():
 
 @app.route("/take_test")
 def on_take_test():
-    # TODO: try shuffling these pictures for each different user. Or filter out some images?
-    pictures = get_pictures()
-    return render_template("take_test.html",  pictures=pictures, pic_path='/static/images/')
+    return render_template("take_test.html",  pictures=get_pictures(), pic_path="/static/images/")
 
 @app.route("/graph_display")
 def graph_display():
@@ -154,13 +160,6 @@ def get_stddev_mos_data():
 #     #os.mknod(log_path)
 #     #with open(log_path, "w") as f:
 #     #    f.write(str(log))
-
-
-def get_pictures():
-    """
-    Gets the paths of all of the pictures in the static images folder.
-    """
-    return [pic[:-4] for pic in os.listdir(app.static_folder + "/images")]
 
 # breaks everything on the actual server:
 #app.run(host='localhost', port=5000)
