@@ -17,7 +17,7 @@ function getChosenRating(){
 }
 
 /**
- * Implements the behavior of the 'next' button.
+ * Implements the behavior of the 'Start/Next/Done' button.
  */
 function onNextPressed(){
 
@@ -43,20 +43,21 @@ function onNextPressed(){
 
     //switch to displaying the next image
     hideImageById(im.id)
+    console.log(`current image's id: ${im.id}}`)
 
-    // -1 because the logo image is counted as an image, -1 because of 0 or 1 
-    var l = document.getElementsByTagName("img").length - 2
+    // 'img_responsive' is the class that includes only the test images (no icons). 
+    var num_imgs = document.getElementsByClassName("img_responsive").length 
 
-    console.log(`current image: ${im.id}`)
-    console.log(`tot img ${l}`)
-    if (im.id ==l) {
+    // Show 'Done' instead of 'Next' when displaying the last image.
+    // -1 Beacuse 'im.id' starts from zero. 
+    if (im.id == num_imgs-1) {
         document.getElementById("button_next").innerHTML = "Done";
     }
 
     try{
         showImageById(parseInt(im.id)+1)
     }catch{
-        //if that's the last image, show the done button.
+        // submit form when Done.
         document.forms["rating_form"].submit()
     }    
 
