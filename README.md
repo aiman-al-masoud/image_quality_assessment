@@ -103,7 +103,7 @@ $ python3 -m venv .my_env
 $ source ./my_env/bin/activate
 ```
 
-If this command doesn't works try with:
+If this command doesn't work try with:
 
 ```
 $ . .my_env/bin/activate
@@ -139,8 +139,10 @@ Click on the link, and the homepage will be launched on your default browser.
 
 # Tips:
 
-* To avoid a ton of stress while debugging this, please try to turn caching off on your favourite browser:
+* To avoid a lot of frustration while debugging this, please try to turn caching off on your favourite browser:
 
 https://www.webinstinct.com/faq/how-to-disable-browser-cache
+
+https://nicholasbering.ca/tools/2016/10/09/devtools-disable-caching/
 
 
