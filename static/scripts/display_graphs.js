@@ -6,7 +6,7 @@ function display(names, originals, imp1, imp2, div_name, title) {
       x: names,
       y: originals,
       type: 'scatter',
-      name: "Orginal",
+      name: "Original",
       marker: {
         color: '#44d800',
         size: 12
