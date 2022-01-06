@@ -12,9 +12,10 @@
 
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
-Our website <a href="https://siqa.pythonanywhere.com"><strong>https://siqa.pythonanywhere.com</strong></a> is currently live and reachable. 
+Our website <a href="https://siqa.pythonanywhere.com" target="_blank"><strong>https://siqa.pythonanywhere.com</strong></a> is currently live and reachable. 
 
-<a href="https://drive.google.com/file/d/1po_hfQ2VX5T3M6yyfkS1bZNUnFE1JP2z/view?usp=sharing"><strong>WATCH PREVIEW VIDEO</strong></a>
+- <a href="https://drive.google.com/file/d/1po_hfQ2VX5T3M6yyfkS1bZNUnFE1JP2z/view?usp=sharing" target="_blank"><strong>PREVIEW VIDEO</strong></a>
+- <a href="https://www.icloud.com/keynote/096lgsw1LvNqKepOOXn8xfM0g#Presentazione_SIQA" target="_blank"><strong>PRESENTATION</strong></a>
 
 ![all-devices-black](https://user-images.githubusercontent.com/80333091/147682077-4fb7e86a-fec7-421f-bec7-be3113c729d3.png)
 
@@ -26,7 +27,7 @@ Be VERY CAREFUL when you push anything to this repo, as the WEBHOOK THAT AUTOMAT
 
 # IMPORTANT NOTICE (about flask, please read it): 
 
-<a href="https://en.wikipedia.org/wiki/Flask_(web_framework)">Flask</a> is the Python web-framework currently being used to develop the back-end of this website. It's simple and easy to use if you know some basic Python. 
+<a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" target="_blank">Flask</a> is the Python web-framework currently being used to develop the back-end of this website. It's simple and easy to use if you know some basic Python. 
 
 (But if anyone has any better proposals for a web framework in Python or Java, please notify the rest).
 
