@@ -103,4 +103,10 @@ window.onload = () => {
 
     display(names, originals, imp1, imp2, "stddev_mos_graph_div", "&#963; of MOS");
   });
+
 }
+
+/* Understand the number of partecipants in ratings.csv, and write it in partecipants label in graph_display.html*/
+var ratings_db = location.hostname + "/dynamic/ratings.csv";
+var partecipants = (ratings_db.split("\n")).length;
+document.getElementById('partecipants').innerHTML = partecipants;

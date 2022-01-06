@@ -8,6 +8,14 @@ body{
   color: #485efd;
 }
 
+.light-blue{
+  color: #27bce6;
+}
+
+.large {
+  font-size: large;
+}
+
 .white{
   color: rgb(241, 241, 241);
 }
