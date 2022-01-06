@@ -108,5 +108,5 @@ window.onload = () => {
 
 /* Understand the number of partecipants in ratings.csv, and write it in partecipants label in graph_display.html*/
 var ratings_db = location.hostname + "/dynamic/ratings.csv";
-var partecipants = (ratings_db.split("\n")).length;
+var partecipants = (ratings_db.split("\n")).length - 1;
 document.getElementById('partecipants').innerHTML = partecipants;
