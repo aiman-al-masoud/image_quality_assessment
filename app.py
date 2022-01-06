@@ -86,6 +86,7 @@ def stats_getters_generator(stat_f, stat_name):
     return getter
 
 get_mos_json = stats_getters_generator(get_mos, "mos")
+get_number_partecipants_json = lambda:f'{{"partecipants": {(len(database) - 1)}}}'
 get_mos_stddev_json = stats_getters_generator(get_mos_stddev, "stddev-mos")
 
 def get_pictures():
@@ -134,6 +135,9 @@ def get_mos_data():
 def get_stddev_mos_data():
     return get_mos_stddev_json()
 
+@app.route("/get-number-partecipants")
+def get_number_partecipants():
+    return get_number_partecipants_json()
 
 
 # @app.route("/webhook", methods=["POST", "GET"])
