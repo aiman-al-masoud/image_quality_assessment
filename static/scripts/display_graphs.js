@@ -89,7 +89,7 @@ window.onload = () => {
     let imp2 = json_data["heavily-impaired-image-mos"];
 
     display(names, originals, imp1, imp2, "mos_graph_div", "MOS");
-});
+  });
 
   fetch('/get-stddev-mos-data')
   .then((response) => {
@@ -104,17 +104,16 @@ window.onload = () => {
     display(names, originals, imp1, imp2, "stddev_mos_graph_div", "&#963; of MOS");
   });
 
+  /* Understand the number of partecipants in ratings.csv, and write it in partecipants label in graph_display.html */
+  fetch('/get-number-partecipants')
+  .then((response) => {
+    return response.json();
+  })
+  .then(json_data => {
+    let partecipants = json_data["partecipants"];
+    if (partecipants == 1)
+      document.getElementById('get-number-partecipants').innerHTML = partecipants + ' partecipant';
+    else
+      document.getElementById('get-number-partecipants').innerHTML = partecipants + ' partecipants';
+  });
 }
-
-/* Understand the number of partecipants in ratings.csv, and write it in partecipants label in graph_display.html */
-fetch('/get-number-partecipants')
-.then((response) => {
-  return response.json();
-})
-.then(json_data => {
-  let partecipants = json_data["partecipants"];
-  if (partecipants == 1)
-    document.getElementById('get-number-partecipants').innerHTML = partecipants + ' partecipant';
-  else
-    document.getElementById('get-number-partecipants').innerHTML = partecipants + ' partecipants';
-});
