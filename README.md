@@ -15,7 +15,7 @@ This is the website for a group-project aimed at assessing the quality of images
 Our website <a href="https://siqa.pythonanywhere.com" target="_blank"><strong>https://siqa.pythonanywhere.com</strong></a> is currently live and reachable. 
 
 - <a href="https://drive.google.com/file/d/1po_hfQ2VX5T3M6yyfkS1bZNUnFE1JP2z/view?usp=sharing" target="_blank"><strong>PREVIEW VIDEO</strong></a>
-- <a href="https://www.icloud.com/keynote/096lgsw1LvNqKepOOXn8xfM0g#Presentazione_SIQA" target="_blank"><strong>PROJECT PRESENTATION</strong></a>
+- <a href="https://www.icloud.com/keynote/096lgsw1LvNqKepOOXn8xfM0g#Presentazione_SIQA" target="_blank"><strong>PRESENTATION</strong></a>
 
 ![all-devices-black](https://user-images.githubusercontent.com/80333091/147682077-4fb7e86a-fec7-421f-bec7-be3113c729d3.png)
 
@@ -25,7 +25,9 @@ Be VERY CAREFUL when you push anything to this repo, as the WEBHOOK THAT AUTOMAT
 
 ***
 
-# IMPORTANT NOTICE (about flask, please read it): 
+<details>
+  <summary><b><strong>IMPORTANT NOTICE (about flask, please read it)</strong></b></summary>
+  <br> 
 
 <a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" target="_blank">Flask</a> is the Python web-framework currently being used to develop the back-end of this website. It's simple and easy to use if you know some basic Python. 
 
@@ -78,11 +80,10 @@ https://flask-restful.readthedocs.io/en/latest/quickstart.html
 
 **That's all, thank you for taking the time to read this!**
 
+</details>
 
-
-
-
-# Setting up a local testing environment:
+<details>
+  <summary><b><strong>SETTING UP A LOCAL TESTING ENVIRONMENT</strong></b></summary>
 
 ## 1) Clone this repo
 ...and navigate to its root directory.
@@ -137,13 +138,14 @@ $ . .my_env/bin/activate
 
 Click on the link, and the homepage will be launched on your default browser.
 
+</details>
 
-# Tips:
+<details>
+   <summary><b><strong>TIPS</strong></b></summary>
+   <br> 
 
-* To avoid a lot of frustration while debugging this, please try to turn caching off on your favourite browser:
+To avoid a lot of frustration while debugging this, please try to turn caching off on your favourite browser:
+ - https://www.webinstinct.com/faq/how-to-disable-browser-cache
+ - https://nicholasbering.ca/tools/2016/10/09/devtools-disable-caching/
 
-https://www.webinstinct.com/faq/how-to-disable-browser-cache
-
-https://nicholasbering.ca/tools/2016/10/09/devtools-disable-caching/
-
-
+</details>
