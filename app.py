@@ -107,6 +107,13 @@ def on_index():
 def on_take_test():
     return render_template("take_test.html",  pictures=get_pictures(), pic_path="/static/images/")
 
+@app.route("/images_display")
+def on_images_display():
+    original_images_names = pic_names[::3]
+    readable_names = ['Books', 'Water', 'Tiger', 'Dogs', 'Hand', 'Mountains', 'Tree', 'London', 'Poppies', 'Bear']
+    return render_template("images_display.html",  pictures=original_images_names,
+        pic_path="/static/images/", readable_names=readable_names)
+
 @app.route("/graph_display")
 def graph_display():
     return render_template("graph_display.html")

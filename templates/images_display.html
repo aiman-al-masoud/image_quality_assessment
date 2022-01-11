@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{url_for('static', filename='stylesheets/style.css')}}" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='icons/favicon.ico')}}">
-
-    <script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>
     
-    <title>SIQA - Graph Display</title>
+    <title>SIQA - Images Display</title>
 </head>
 <body>
 
@@ -17,24 +15,26 @@
         {% include 'navbar.html' %}
     </nav>  
 
-    <h1 class="blue">Live image quality assessment session - Results</h1>
+    <h1 class="blue">Live image quality assessment session - Images</h1>
     <h5><label class="light-blue large" id="get-number-partecipants"></label></label></h5>
     <br>
     
-    <h2>Mos Graph</h2>
-    <div id="mos_graph_div"></div>
-    <hr>
-
-    <h2>Standard Deviation Graph</h2>
-    <div id="stddev_mos_graph_div"></div>
-    <br><br>
-    <button id="button_images_display" class="button" type="button" onclick="window.location.href = '/images_display';">View the live session test images</button>
+    <h2>Images used in the live session test</h2>
+    <div id="images_div" style="padding: 0%;">
+        {% for pic in pictures %}
+            <div>
+                <h4 id="title_{{loop.index}}">Image name: "{{readable_names[loop.index - 1]}}"</h4>
+            </div>
+            <div>
+                <img id="{{loop.index}}" src="{{pic_path}}{{pic}}.jpg" data-pic="{{pic}}" alt="" class="img_responsive" />
+            </div>
+        {% endfor %}
+    </div>
     <br><br><br><br>
 
     <footer id="footer">
         {% include 'footer.html' %}
     </footer>
-    
-    <script src="{{url_for('static', filename='scripts/display_graphs.js')}}"></script>
+
 </body>
 </html>
