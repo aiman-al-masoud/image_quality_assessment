@@ -9,7 +9,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-## Intro
+## Introduction
 This is the website for a group-project aimed at assessing the quality of images using the subjective (rating-based) approach.
 
 Our website <a href="https://siqa.pythonanywhere.com" target="_blank"><strong>https://siqa.pythonanywhere.com</strong></a> is currently live and reachable. 
